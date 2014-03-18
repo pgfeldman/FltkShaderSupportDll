@@ -1,0 +1,171 @@
+\hypertarget{class_dprint}{\section{Dprint Class Reference}
+\label{class_dprint}\index{Dprint@{Dprint}}
+}
+
+
+Adds printf-\/like functionality to on Open\-G\-L display.  
+
+
+
+
+{\ttfamily \#include $<$Dprint.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_dprint_acdbb52c53803d5f44fe340b6be8103e2}{add} (const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em Adds a string using pritf formatting. \end{DoxyCompactList}\item 
+static void \hyperlink{class_dprint_af6eef0dd502444c9aa3fb8bb03f72f79}{screen\-Print} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Print all the stored strings to the screen. \end{DoxyCompactList}\item 
+static void \hyperlink{class_dprint_a39cc3c349ebcddfab329005972fbf9b3}{reset} ()
+\begin{DoxyCompactList}\small\item\em Clears all strings out of storage. Should be called immediately after rendering (i.\-e. screen\-Print) \end{DoxyCompactList}\item 
+static void \hyperlink{class_dprint_a17c3123f32889461fd68fa9ba269fcb3}{add\-Matrix44} (const char $\ast$str, const float farray\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em A convience method for printing out 4 x 4 matrices. \end{DoxyCompactList}\item 
+static void \hyperlink{class_dprint_af5a825194bc234eeb0fc30365b9d719e}{add\-Matrix33} (const char $\ast$str, const float farray\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em A convience method for printing out 3 x 3 matrices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_dprint_a4b2af1b0c816c7c8145f18ebd53df207}{{\bfseries Dprint} (const \hyperlink{class_dprint}{Dprint} \&)}\label{class_dprint_a4b2af1b0c816c7c8145f18ebd53df207}
+
+\item 
+\hypertarget{class_dprint_a9c3612b9ef48a5dbba41e83a469931f7}{\hyperlink{class_dprint}{Dprint} \& {\bfseries operator=} (const \hyperlink{class_dprint}{Dprint} \&)}\label{class_dprint_a9c3612b9ef48a5dbba41e83a469931f7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adds printf-\/like functionality to on Open\-G\-L display. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_dprint_acdbb52c53803d5f44fe340b6be8103e2}{\index{Dprint@{Dprint}!add@{add}}
+\index{add@{add}!Dprint@{Dprint}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Dprint\-::add} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_dprint_acdbb52c53803d5f44fe340b6be8103e2}
+
+
+Adds a string using pritf formatting. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em format} & The string containing formatting info \\
+\hline
+{\em ...} & The values referenced in the format string \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_dprint_af5a825194bc234eeb0fc30365b9d719e}{\index{Dprint@{Dprint}!add\-Matrix33@{add\-Matrix33}}
+\index{add\-Matrix33@{add\-Matrix33}!Dprint@{Dprint}}
+\subsubsection[{add\-Matrix33}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Dprint\-::add\-Matrix33} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{const float}]{farray\mbox{[}9\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_dprint_af5a825194bc234eeb0fc30365b9d719e}
+
+
+A convience method for printing out 3 x 3 matrices. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & A string describing or naming the array \\
+\hline
+{\em farray} & The farray. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_dprint_a17c3123f32889461fd68fa9ba269fcb3}{\index{Dprint@{Dprint}!add\-Matrix44@{add\-Matrix44}}
+\index{add\-Matrix44@{add\-Matrix44}!Dprint@{Dprint}}
+\subsubsection[{add\-Matrix44}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Dprint\-::add\-Matrix44} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{const float}]{farray\mbox{[}16\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_dprint_a17c3123f32889461fd68fa9ba269fcb3}
+
+
+A convience method for printing out 4 x 4 matrices. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & A string describing or naming the array \\
+\hline
+{\em farray} & The farray. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_dprint_a39cc3c349ebcddfab329005972fbf9b3}{\index{Dprint@{Dprint}!reset@{reset}}
+\index{reset@{reset}!Dprint@{Dprint}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Dprint\-::reset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_dprint_a39cc3c349ebcddfab329005972fbf9b3}
+
+
+Clears all strings out of storage. Should be called immediately after rendering (i.\-e. screen\-Print) 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+\hypertarget{class_dprint_af6eef0dd502444c9aa3fb8bb03f72f79}{\index{Dprint@{Dprint}!screen\-Print@{screen\-Print}}
+\index{screen\-Print@{screen\-Print}!Dprint@{Dprint}}
+\subsubsection[{screen\-Print}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Dprint\-::screen\-Print} (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_dprint_af6eef0dd502444c9aa3fb8bb03f72f79}
+
+
+Print all the stored strings to the screen. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the screen in pixels. \\
+\hline
+{\em height} & The height of the screen in pixels. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Dprint.\-h\item 
+Dprint.\-cpp\end{DoxyCompactItemize}

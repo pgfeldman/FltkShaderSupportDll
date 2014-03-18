@@ -1,0 +1,42 @@
+﻿Build started 6/12/2013 2:44:44 PM.
+     1>Project "C:\Phil\MSVC Dev\FltkShaderSupportDll\FltShaderSupportTestExec\FltShaderSupportTestExec.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\FltShaderSupportTestExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\FltkShaderSupportDll" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt FltShaderSupportTestExec.cpp GeoTestShaderWindow.cpp ShaderViewUI.cxx SolarSystem.cpp stdafx.cpp
+         stdafx.cpp
+         SolarSystem.cpp
+         ShaderViewUI.cxx
+         GeoTestShaderWindow.cpp
+         FltShaderSupportTestExec.cpp
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\FltShaderSupportTestExec.exe.embed.manifest.res" Debug\FltShaderSupportTestExec_manifest.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug\FltShaderSupportTestExec.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.lib" /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.lib" /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug" opengl32.lib glu32.lib fltkgl.lib FLTKD.LIB WSOCK32.LIB gltools.lib FltkShaderSupportLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:LIBCMT.lib /MANIFEST /ManifestFile:"Debug\FltShaderSupportTestExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug\FltShaderSupportTestExec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug\FltShaderSupportTestExec.lib" /MACHINE:X86 Debug\FltShaderSupportTestExec.exe.embed.manifest.res
+         Debug\FltShaderSupportTestExec.obj
+         Debug\GeoTestShaderWindow.obj
+         Debug\ShaderViewUI.obj
+         Debug\SolarSystem.obj
+         Debug\stdafx.obj
+         "C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug\FltkShaderSupportLib.lib"
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\FltShaderSupportTestExec.exe.embed.manifest" /manifest Debug\FltShaderSupportTestExec.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\FltShaderSupportTestExec.exe.embed.manifest.res" Debug\FltShaderSupportTestExec_manifest.rc 
+       LinkEmbedManifest:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug\FltShaderSupportTestExec.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.lib" /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.lib" /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug" opengl32.lib glu32.lib fltkgl.lib FLTKD.LIB WSOCK32.LIB gltools.lib FltkShaderSupportLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:LIBCMT.lib /MANIFEST /ManifestFile:"Debug\FltShaderSupportTestExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug\FltShaderSupportTestExec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug\FltShaderSupportTestExec.lib" /MACHINE:X86 Debug\FltShaderSupportTestExec.exe.embed.manifest.res
+         Debug\FltShaderSupportTestExec.obj
+         Debug\GeoTestShaderWindow.obj
+         Debug\ShaderViewUI.obj
+         Debug\SolarSystem.obj
+         Debug\stdafx.obj
+         "C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug\FltkShaderSupportLib.lib"
+         FltShaderSupportTestExec.vcxproj -> C:\Phil\MSVC Dev\FltkShaderSupportDll\Debug\FltShaderSupportTestExec.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\FltShaderSupportTestExec.unsuccessfulbuild".
+         Touching "Debug\FltShaderSupportTestExec.lastbuildstate".
+     1>Done Building Project "C:\Phil\MSVC Dev\FltkShaderSupportDll\FltShaderSupportTestExec\FltShaderSupportTestExec.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.36

@@ -1,0 +1,189 @@
+\hypertarget{class_grid_stage}{\section{Grid\-Stage Class Reference}
+\label{class_grid_stage}\index{Grid\-Stage@{Grid\-Stage}}
+}
+
+
+\hyperlink{class_drawable_object}{Drawable\-Object} that renders a color-\/coded set of 3 orthoganal grids with a user-\/specified size and density.  
+
+
+
+
+{\ttfamily \#include $<$Grid\-Stage.\-h$>$}
+
+Inheritance diagram for Grid\-Stage\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grid_stage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_grid_stage_a9bedebe5c2ba147395284982baeea9dd}{Grid\-Stage} (float size, int divisions)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_grid_stage_a607e71170c86459ee29bc1ca69a2ffeb}{$\sim$\-Grid\-Stage} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_grid_stage_a572c48e4846caace0ace6cf3a6f6c984}{setup} ()
+\begin{DoxyCompactList}\small\item\em Creates the geometry for this object. \end{DoxyCompactList}\item 
+void \hyperlink{class_grid_stage_a1d97167973141f1a51e395c14c6d9e23}{render} (G\-L\-Matrix\-Stack \&model\-View\-Stack, G\-L\-Matrix\-Stack \&projection\-Stack, G\-L\-Shader\-Manager \&shader\-Manager)
+\begin{DoxyCompactList}\small\item\em Draws this object. \end{DoxyCompactList}\item 
+void \hyperlink{class_grid_stage_ae5dacfb118998dbfaf781765b4d12886}{environment\-Calc} ()
+\begin{DoxyCompactList}\small\item\em Environment calculations. In this case, do nothing. \end{DoxyCompactList}\item 
+void \hyperlink{class_grid_stage_a675b8adf2fe787fc4c5313a939b8de52}{local\-Cleanup} ()
+\begin{DoxyCompactList}\small\item\em Local cleanup. In this case, do nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_drawable_object}{Drawable\-Object} that renders a color-\/coded set of 3 orthoganal grids with a user-\/specified size and density. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_grid_stage_a9bedebe5c2ba147395284982baeea9dd}{\index{Grid\-Stage@{Grid\-Stage}!Grid\-Stage@{Grid\-Stage}}
+\index{Grid\-Stage@{Grid\-Stage}!GridStage@{Grid\-Stage}}
+\subsubsection[{Grid\-Stage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grid\-Stage\-::\-Grid\-Stage} (
+\begin{DoxyParamCaption}
+\item[{float}]{size, }
+\item[{int}]{divisions}
+\end{DoxyParamCaption}
+)}}\label{class_grid_stage_a9bedebe5c2ba147395284982baeea9dd}
+
+
+Constructor. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size of each 'grid plane'from the origin. Since planes extend equally from the origin, this is actually 1/2 the size \\
+\hline
+{\em divisions} & The number of lines in each 'grid plane'. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grid_stage_a607e71170c86459ee29bc1ca69a2ffeb}{\index{Grid\-Stage@{Grid\-Stage}!$\sim$\-Grid\-Stage@{$\sim$\-Grid\-Stage}}
+\index{$\sim$\-Grid\-Stage@{$\sim$\-Grid\-Stage}!GridStage@{Grid\-Stage}}
+\subsubsection[{$\sim$\-Grid\-Stage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grid\-Stage\-::$\sim$\-Grid\-Stage} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_grid_stage_a607e71170c86459ee29bc1ca69a2ffeb}
+
+
+Destructor. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_grid_stage_ae5dacfb118998dbfaf781765b4d12886}{\index{Grid\-Stage@{Grid\-Stage}!environment\-Calc@{environment\-Calc}}
+\index{environment\-Calc@{environment\-Calc}!GridStage@{Grid\-Stage}}
+\subsubsection[{environment\-Calc}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Grid\-Stage\-::environment\-Calc} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_grid_stage_ae5dacfb118998dbfaf781765b4d12886}
+
+
+Environment calculations. In this case, do nothing. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+Implements \hyperlink{class_drawable_object_a209194d1e8aa9d51f809625ddffb8bd0}{Drawable\-Object}.
+
+\hypertarget{class_grid_stage_a675b8adf2fe787fc4c5313a939b8de52}{\index{Grid\-Stage@{Grid\-Stage}!local\-Cleanup@{local\-Cleanup}}
+\index{local\-Cleanup@{local\-Cleanup}!GridStage@{Grid\-Stage}}
+\subsubsection[{local\-Cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Grid\-Stage\-::local\-Cleanup} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_grid_stage_a675b8adf2fe787fc4c5313a939b8de52}
+
+
+Local cleanup. In this case, do nothing. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+Implements \hyperlink{class_drawable_object_af2b5d9d42137f9bf15aecb5c00f79d4e}{Drawable\-Object}.
+
+\hypertarget{class_grid_stage_a1d97167973141f1a51e395c14c6d9e23}{\index{Grid\-Stage@{Grid\-Stage}!render@{render}}
+\index{render@{render}!GridStage@{Grid\-Stage}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Grid\-Stage\-::render} (
+\begin{DoxyParamCaption}
+\item[{G\-L\-Matrix\-Stack \&}]{model\-View\-Stack, }
+\item[{G\-L\-Matrix\-Stack \&}]{projection\-Stack, }
+\item[{G\-L\-Shader\-Manager \&}]{shader\-Manager}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_grid_stage_a1d97167973141f1a51e395c14c6d9e23}
+
+
+Draws this object. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em model\-View\-Stack} & model view matrix stack. \\
+\hline
+\mbox{\tt in,out}  & {\em projection\-Stack} & projections projection stack \\
+\hline
+\mbox{\tt in,out}  & {\em shader\-Manager} & collection of default shaders \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_drawable_object_abca3d859cccf27811a99fdd3f895b34a}{Drawable\-Object}.
+
+\hypertarget{class_grid_stage_a572c48e4846caace0ace6cf3a6f6c984}{\index{Grid\-Stage@{Grid\-Stage}!setup@{setup}}
+\index{setup@{setup}!GridStage@{Grid\-Stage}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Grid\-Stage\-::setup} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grid_stage_a572c48e4846caace0ace6cf3a6f6c984}
+
+
+Creates the geometry for this object. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Grid\-Stage.\-h\item 
+Grid\-Stage.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,952 @@
+\hypertarget{class_gl___shader_window}{\section{Gl\-\_\-\-Shader\-Window Class Reference}
+\label{class_gl___shader_window}\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}}
+}
+
+
+Extension of the F\-L\-T\-K Fl\-\_\-\-Gl\-\_\-\-Window (\href{http://www.fltk.org/doc-1.3/classFl__Gl__Window.html}{\tt http\-://www.\-fltk.\-org/doc-\/1.\-3/class\-Fl\-\_\-\-\_\-\-Gl\-\_\-\-\_\-\-Window.\-html}) to support Open\-Gl 3.\-0+ rendering (i.\-e. no fixed function).  
+
+
+
+
+{\ttfamily \#include $<$Gl\-\_\-\-Shader\-Window.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_gl___shader_window_a3686f6aa69a673a4e1fc662281317c46}{T\-R\-A\-N\-S\-F\-O\-R\-M\-\_\-\-M\-O\-D\-E} \{ \\*
+{\bfseries E\-Y\-E\-\_\-\-M\-O\-V\-E}, 
+{\bfseries E\-Y\-E\-\_\-\-R\-O\-T\-A\-T\-E}, 
+{\bfseries W\-O\-R\-L\-D\-\_\-\-M\-O\-V\-E}, 
+{\bfseries W\-O\-R\-L\-D\-\_\-\-R\-O\-T\-A\-T\-E}, 
+\\*
+{\bfseries P\-I\-C\-K}
+ \}
+\begin{DoxyCompactList}\small\item\em Values that represent T\-R\-A\-N\-S\-F\-O\-R\-M\-\_\-\-M\-O\-D\-E. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_gl___shader_window_ac330806613f9b57db57345eb35b2bf6c}{Gl\-\_\-\-Shader\-Window} (int x, int y, int w, int h, const char $\ast$l=0)
+\begin{DoxyCompactList}\small\item\em Extension of the F\-L\-T\-K Fl\-\_\-\-Gl\-\_\-\-Window (\href{http://www.fltk.org/doc-}{\tt http\-://www.\-fltk.\-org/doc-\/} 1.\-3/class\-Fl\-\_\-\-\_\-\-Gl\-\_\-\-\_\-\-Window.html) to support Open\-Gl 3.\-0+ rendering (i.\-e. no fixed function). \end{DoxyCompactList}\item 
+\hyperlink{class_gl___shader_window_a071d2020a046fa8a725c7cc16842fda4}{$\sim$\-Gl\-\_\-\-Shader\-Window} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a0bbf51169ec4ba97f42821060c1cc122}{set\-Eye\-Pos} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Sets an eye position. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a42cf6d404570858d878af82675dfb20d}{set\-Eye\-Orient} (float pitch, float roll, float yaw)
+\begin{DoxyCompactList}\small\item\em Sets an eye orientation. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a4bd1d1859c809d0d9866bc0c4bf49658}{calc\-Eye\-Vec} ()
+\begin{DoxyCompactList}\small\item\em Calculates the eye vector based on the eye orientation. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a9a1d50a03f032b25cfaaa913b5758544}{set\-World\-Pos} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Sets the position of the global origin. In other words, all objects placed in the scene will be relative to this point. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a6499a79a5d4370c777fad1d0d957ed0f}{set\-World\-Orient} (float pitch, float roll, float yaw)
+\begin{DoxyCompactList}\small\item\em Sets the orientation of the global origin. In other words, all objects placed in the scene will be relative to this orientation. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a33a225dcaaf1772cbc635a7ca189a7a7}{set\-Rot\-Scalar} (float scalar)
+\begin{DoxyCompactList}\small\item\em Sets the scalar for transforming mouse movement to degrees. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a153e4df41b67cee2a38a5b73b53e0186}{set\-Trans\-Scalar} (float scalar)
+\begin{DoxyCompactList}\small\item\em Sets the scalar for transforming mouse movement to vovement of the camera or 'universe'. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a9d4c39cb6c5546512aa6344301024e03}{set\-Mouse\-Wheel\-Scalar} (float scalar)
+\begin{DoxyCompactList}\small\item\em Sets a mouse wheel scalar for translation to z-\/motion of the camera. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a06a84cc7a02fc4647738f0ee683faf4c}{set\-Eye\-Transform\-Mode} ()
+\begin{DoxyCompactList}\small\item\em Sets the eye transform mode to E\-Y\-E\-\_\-\-R\-O\-T\-A\-T\-E. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a5b9624acedb8f7d7c5de9605a4d6c4c0}{set\-World\-Transform\-Mode} ()
+\begin{DoxyCompactList}\small\item\em Sets the world transform mode to W\-O\-R\-L\-D\-\_\-\-R\-O\-T\-A\-T\-E. \end{DoxyCompactList}\item 
+float \hyperlink{class_gl___shader_window_a03ba71f8827e2d0cf52cbbd5b982ac70}{deg\-To\-Rad} (float deg\-Angle)
+\begin{DoxyCompactList}\small\item\em Degrees to radians. \end{DoxyCompactList}\item 
+float \hyperlink{class_gl___shader_window_ac8ca550e7d44f570e4c4d2e196505143}{rad\-To\-Deg} (float rad\-Angle)
+\begin{DoxyCompactList}\small\item\em Radians to degrees. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a7a5eb942d260a6330f03ed9790e40fc5}{set\-Refresh\-Seconds} (float duration)
+\begin{DoxyCompactList}\small\item\em Sets the minimum 'pause' between frames. Typical values range between 0.\-001 to 0.\-1 seconds. Complex frames may take longer to draw. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a8c6817c102720f84f5df7795852e9d5b}{init} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Initialises the open\-Gl canvas for shader use. Default values are\-: gl\-Cull\-Face(\-G\-L\-\_\-\-B\-A\-C\-K); gl\-Front\-Face(\-G\-L\-\_\-\-C\-C\-W); gl\-Enable(\-G\-L\-\_\-\-D\-E\-P\-T\-H\-\_\-\-T\-E\-S\-T); gl\-Clear\-Color(0.\-75, 0.\-75, 0.\-75, 0.\-75); view frustum of 45 degrees horizontal. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_gl___shader_window_a256e72c467903d87db25dbae662eaca6}{local\-Init} ()=0
+\begin{DoxyCompactList}\small\item\em any additional initialization required by a subclass should add their code here. It is called in the correct order within \hyperlink{class_gl___shader_window_a8c6817c102720f84f5df7795852e9d5b}{init()} \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_gl___shader_window_a9aebb07e1342893949d60170d06d4ab8}{resize} ()
+\begin{DoxyCompactList}\small\item\em Resizes the canvas and reinitializes any Open\-Gl values that may need it. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_gl___shader_window_abf51f0748686a6e17b17aa3054ed4743}{draw3\-Dsetup} ()
+\begin{DoxyCompactList}\small\item\em Called before all drawing begins by \hyperlink{class_gl___shader_window_a8c6817c102720f84f5df7795852e9d5b}{init()} \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a3dd33544ebbabcac7db5864861c12809}{pre\-Draw3\-D} ()
+\begin{DoxyCompactList}\small\item\em Called every frame before drawing. Contains things like gl\-Clear() \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a2e8d5063ac2dc9609287c0a20957aa2c}{post\-Draw3\-D} ()
+\begin{DoxyCompactList}\small\item\em Called every frame after all 3\-D drawing has completed. The default is simply a model\-View\-Matrix\-Stack.\-pop\-Matrix();. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_ac60ed9524608ca4afbab1bb671f2593f}{draw2\-D} ()
+\begin{DoxyCompactList}\small\item\em Contains 2\-D overlay drawing. This uses fixed function pipline calls, and should be replaced at some time with a text overlay shader. I think that the way it could be done would be to create a single grid with all the characters and pass that to the vertex shader with the X\-Y index and size of the letter. The vertex shader moves the texture so that the letter is centered and then passes off the texture and size to the fragment shader, which clips the output so only the particular letter is shown. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_gl___shader_window_a165119509d48c94769ab85c265217fdc}{environment\-Calc} ()=0
+\begin{DoxyCompactList}\small\item\em Do any calculations for things that happen as a function of time in the running system and call the \hyperlink{class_gl___shader_window_a165119509d48c94769ab85c265217fdc}{environment\-Calc()} methods in any \hyperlink{class_drawable_object}{Drawable\-Object}. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a76283a77a37b1a49db373f8937f6dc7a}{cleanup} ()
+\begin{DoxyCompactList}\small\item\em Cleans up this object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_gl___shader_window_a43069eb91b8ace27b2778be18d9e8ede}{local\-Cleanup} ()=0
+\begin{DoxyCompactList}\small\item\em Place to do cleanup in inhereting classes, such as calling delete() on Drawable\-Objects. \end{DoxyCompactList}\item 
+int \hyperlink{class_gl___shader_window_a4624fc40cc52308730ef9b5853e274f6}{handle} (int event)
+\begin{DoxyCompactList}\small\item\em The widget class \hyperlink{class_gl___shader_window_a4624fc40cc52308730ef9b5853e274f6}{handle(int event)} override The virtual method Fl\-\_\-\-Widget\-::handle(int event) is called to handle each event passed to the widget. It can\-: Change the state of the widget. Call Fl\-\_\-\-Widget\-::redraw() if the widget needs to be redisplayed. Call Fl\-\_\-\-Widget\-::damage(uchar c) if the widget needs a partial-\/update (assuming you provide support for this in your draw() method). Call Fl\-\_\-\-Widget\-::do\-\_\-callback() if a callback should be generated. Call Fl\-\_\-\-Widget\-::handle() on child widgets. Events are identified by the integer argument. Other information about the most recent event is stored in static locations and acquired by calling the Fl\-::event\-\_\-$\ast$() methods. This information remains valid until another event is handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_gl___shader_window_a23e41d6844ce46a20ca78384d1ec894f}{set\-Floats} (G\-Lfloat $\ast$ptr, int amount,...)
+\begin{DoxyCompactList}\small\item\em Sets the floats in an array. \end{DoxyCompactList}\item 
+void \hyperlink{class_gl___shader_window_a213b927eabf77a893cfddc97d74df606}{set\-Pick\-Matrix} (G\-Ldouble x, G\-Ldouble y, G\-Ldouble deltax, G\-Ldouble deltay, G\-Lint viewport\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em A slightly modified version of the original glu\-Pick\-Matrix, taken from\-: \href{http://oss.sgi.com/cgi-bin/cvsweb.cgi/projects/ogl-sample/main/gfx/lib/glu/libutil/project.c?rev=1.4;content-type=text%2Fplain}{\tt http\-://oss.\-sgi.\-com/cgi-\/bin/cvsweb.\-cgi/projects/ogl-\/sample/main/gfx/lib/glu/libutil/project.\-c?rev=1.\-4;content-\/type=text\%2\-Fplain}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_gl___shader_window_a05458410d98856caace69f720758d48f}{timer\-Callback} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Drawing callback, triggered by the timer. \end{DoxyCompactList}\item 
+static void \hyperlink{class_gl___shader_window_a6905f72232561b5812a284dfc7b9ce7f}{Menu\-\_\-\-C\-B} (Fl\-\_\-\-Widget $\ast$wp, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Callback from menu selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_gl___shader_window_a295dc1c5ed52a85a1d2408bd89630d46}{refresh\-Seconds}
+\item 
+bool \hyperlink{class_gl___shader_window_abe8db75a3baa13f8367fcc264b75adb7}{initialized}
+\item 
+bool \hyperlink{class_gl___shader_window_af47d98a4fc21b5cc41fb1671f8dc62d7}{is\-Picking}
+\item 
+\hyperlink{class_gl___shader_window_a3686f6aa69a673a4e1fc662281317c46}{T\-R\-A\-N\-S\-F\-O\-R\-M\-\_\-\-M\-O\-D\-E} \hyperlink{class_gl___shader_window_a12ad84c52e8b811327dc94c38801d361}{tmode}
+\item 
+G\-Lfloat \hyperlink{class_gl___shader_window_a19fc45584c8eda39a057dbfef0cf566e}{eye\-Pos} \mbox{[}3\mbox{]}
+\item 
+G\-Lfloat \hyperlink{class_gl___shader_window_a88fa20f2b66aedffcefefbe4c8e44e1f}{eye\-Orient} \mbox{[}3\mbox{]}
+\item 
+G\-Lfloat \hyperlink{class_gl___shader_window_a5bdb7ba189bba700f35d1ffb47a13108}{eye\-Vec} \mbox{[}3\mbox{]}
+\item 
+G\-Lfloat \hyperlink{class_gl___shader_window_ad4c9da25def7e89e896cd12db40ac5fd}{world\-Pos} \mbox{[}3\mbox{]}
+\item 
+G\-Lfloat \hyperlink{class_gl___shader_window_afcf8c3826824d05b430c7ae5f34608c7}{world\-Orient} \mbox{[}3\mbox{]}
+\item 
+float \hyperlink{class_gl___shader_window_a947febd52756cc0cc523ae90ead9ffe0}{rot\-Scalar}
+\item 
+float \hyperlink{class_gl___shader_window_a2287aa50de4c8ef43eb3e3377fcbfc01}{trans\-Scalar}
+\item 
+float \hyperlink{class_gl___shader_window_ac3c767b731ccd775a7a7650671b2491f}{mouse\-Wheel\-Scalar}
+\item 
+int \hyperlink{class_gl___shader_window_a41f3f021c0952752bab82b1d1dc6941b}{last\-Mouse\-X}
+\item 
+int \hyperlink{class_gl___shader_window_a379eab3d5a683afb2e36989b30a022c1}{last\-Mouse\-Y}
+\item 
+int \hyperlink{class_gl___shader_window_a5308fe8e7a0e01fa6f8d1a85ca2beb2b}{mouse\-X}
+\item 
+int \hyperlink{class_gl___shader_window_ab98c215b36964a73c241787f2b8fc540}{mouse\-Y}
+\item 
+G\-Lsizei \hyperlink{class_gl___shader_window_a9f71f994a70e27c6baa165681a8b0acc}{screen\-Width}
+\item 
+G\-Lsizei \hyperlink{class_gl___shader_window_a366908d80e9e262420a317f48b5fc17e}{screen\-Height}
+\item 
+Fl\-\_\-\-Menu\-\_\-\-Button $\ast$ \hyperlink{class_gl___shader_window_a6f1ab655c54e12f2c7e196a1067bcb41}{popup\-Menu}
+\item 
+G\-L\-Matrix\-Stack \hyperlink{class_gl___shader_window_aed77a38c67e6cc46a7fecd2457698d96}{model\-View\-Matrix}
+\item 
+G\-L\-Matrix\-Stack \hyperlink{class_gl___shader_window_a6e6bfac76d6be129b28cb8704f98c587}{projection\-Matrix}
+\item 
+G\-L\-Frustum \hyperlink{class_gl___shader_window_a493fed72766a0567958b5d39c923ae7b}{view\-Frustum}
+\item 
+G\-L\-Geometry\-Transform \hyperlink{class_gl___shader_window_a25fb64d31dcb4f56ed8a1fa8e19bda71}{transform\-Pipeline}
+\item 
+G\-L\-Shader\-Manager \hyperlink{class_gl___shader_window_a5a8b7ac536d4482f0de15bd329a3b2f1}{shader\-Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Extension of the F\-L\-T\-K Fl\-\_\-\-Gl\-\_\-\-Window (\href{http://www.fltk.org/doc-1.3/classFl__Gl__Window.html}{\tt http\-://www.\-fltk.\-org/doc-\/1.\-3/class\-Fl\-\_\-\-\_\-\-Gl\-\_\-\-\_\-\-Window.\-html}) to support Open\-Gl 3.\-0+ rendering (i.\-e. no fixed function). 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gl___shader_window_ac330806613f9b57db57345eb35b2bf6c}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}}
+\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{Gl\-\_\-\-Shader\-Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gl\-\_\-\-Shader\-Window\-::\-Gl\-\_\-\-Shader\-Window} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{const char $\ast$}]{l = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_gl___shader_window_ac330806613f9b57db57345eb35b2bf6c}
+
+
+Extension of the F\-L\-T\-K Fl\-\_\-\-Gl\-\_\-\-Window (\href{http://www.fltk.org/doc-}{\tt http\-://www.\-fltk.\-org/doc-\/} 1.\-3/class\-Fl\-\_\-\-\_\-\-Gl\-\_\-\-\_\-\-Window.html) to support Open\-Gl 3.\-0+ rendering (i.\-e. no fixed function). 
+
+Constructor.
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate. \\
+\hline
+{\em y} & The y coordinate. \\
+\hline
+{\em w} & The width. \\
+\hline
+{\em h} & The height. \\
+\hline
+{\em l} & (optional) Label string. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a071d2020a046fa8a725c7cc16842fda4}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!$\sim$\-Gl\-\_\-\-Shader\-Window@{$\sim$\-Gl\-\_\-\-Shader\-Window}}
+\index{$\sim$\-Gl\-\_\-\-Shader\-Window@{$\sim$\-Gl\-\_\-\-Shader\-Window}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{$\sim$\-Gl\-\_\-\-Shader\-Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gl\-\_\-\-Shader\-Window\-::$\sim$\-Gl\-\_\-\-Shader\-Window} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_gl___shader_window_a071d2020a046fa8a725c7cc16842fda4}
+
+
+Destructor. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gl___shader_window_a4bd1d1859c809d0d9866bc0c4bf49658}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!calc\-Eye\-Vec@{calc\-Eye\-Vec}}
+\index{calc\-Eye\-Vec@{calc\-Eye\-Vec}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{calc\-Eye\-Vec}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::calc\-Eye\-Vec} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a4bd1d1859c809d0d9866bc0c4bf49658}
+
+
+Calculates the eye vector based on the eye orientation. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a76283a77a37b1a49db373f8937f6dc7a}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::cleanup} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_gl___shader_window_a76283a77a37b1a49db373f8937f6dc7a}
+
+
+Cleans up this object. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a03ba71f8827e2d0cf52cbbd5b982ac70}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!deg\-To\-Rad@{deg\-To\-Rad}}
+\index{deg\-To\-Rad@{deg\-To\-Rad}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{deg\-To\-Rad}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Gl\-\_\-\-Shader\-Window\-::deg\-To\-Rad} (
+\begin{DoxyParamCaption}
+\item[{float}]{deg\-Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a03ba71f8827e2d0cf52cbbd5b982ac70}
+
+
+Degrees to radians. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em deg\-Angle} & The angle in degrees.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the angle in radians 
+\end{DoxyReturn}
+\hypertarget{class_gl___shader_window_ac60ed9524608ca4afbab1bb671f2593f}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!draw2\-D@{draw2\-D}}
+\index{draw2\-D@{draw2\-D}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{draw2\-D}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::draw2\-D} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_gl___shader_window_ac60ed9524608ca4afbab1bb671f2593f}
+
+
+Contains 2\-D overlay drawing. This uses fixed function pipline calls, and should be replaced at some time with a text overlay shader. I think that the way it could be done would be to create a single grid with all the characters and pass that to the vertex shader with the X\-Y index and size of the letter. The vertex shader moves the texture so that the letter is centered and then passes off the texture and size to the fragment shader, which clips the output so only the particular letter is shown. 
+
+\begin{DoxyVerb}                   Here’s a tutorial on how to make the text texture: http://nehe.gamedev.net/tutorial/2d_texture_font/18002/\end{DoxyVerb}
+ \begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_abf51f0748686a6e17b17aa3054ed4743}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!draw3\-Dsetup@{draw3\-Dsetup}}
+\index{draw3\-Dsetup@{draw3\-Dsetup}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{draw3\-Dsetup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::draw3\-Dsetup} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_gl___shader_window_abf51f0748686a6e17b17aa3054ed4743}
+
+
+Called before all drawing begins by \hyperlink{class_gl___shader_window_a8c6817c102720f84f5df7795852e9d5b}{init()} 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a165119509d48c94769ab85c265217fdc}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!environment\-Calc@{environment\-Calc}}
+\index{environment\-Calc@{environment\-Calc}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{environment\-Calc}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::environment\-Calc} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_gl___shader_window_a165119509d48c94769ab85c265217fdc}
+
+
+Do any calculations for things that happen as a function of time in the running system and call the \hyperlink{class_gl___shader_window_a165119509d48c94769ab85c265217fdc}{environment\-Calc()} methods in any \hyperlink{class_drawable_object}{Drawable\-Object}. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a4624fc40cc52308730ef9b5853e274f6}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!handle@{handle}}
+\index{handle@{handle}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gl\-\_\-\-Shader\-Window\-::handle} (
+\begin{DoxyParamCaption}
+\item[{int}]{event}
+\end{DoxyParamCaption}
+)}}\label{class_gl___shader_window_a4624fc40cc52308730ef9b5853e274f6}
+
+
+The widget class \hyperlink{class_gl___shader_window_a4624fc40cc52308730ef9b5853e274f6}{handle(int event)} override The virtual method Fl\-\_\-\-Widget\-::handle(int event) is called to handle each event passed to the widget. It can\-: Change the state of the widget. Call Fl\-\_\-\-Widget\-::redraw() if the widget needs to be redisplayed. Call Fl\-\_\-\-Widget\-::damage(uchar c) if the widget needs a partial-\/update (assuming you provide support for this in your draw() method). Call Fl\-\_\-\-Widget\-::do\-\_\-callback() if a callback should be generated. Call Fl\-\_\-\-Widget\-::handle() on child widgets. Events are identified by the integer argument. Other information about the most recent event is stored in static locations and acquired by calling the Fl\-::event\-\_\-$\ast$() methods. This information remains valid until another event is handled. 
+
+\begin{DoxyVerb}                   When implemented in a widget, this function must return 0 if the widget does not use the event or 1 otherwise.\end{DoxyVerb}
+ \begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & the kind of event received\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the event was not used or understood 1 if the event was used and can be deleted 
+\end{DoxyReturn}
+\hypertarget{class_gl___shader_window_a8c6817c102720f84f5df7795852e9d5b}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!init@{init}}
+\index{init@{init}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::init} (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_gl___shader_window_a8c6817c102720f84f5df7795852e9d5b}
+
+
+Initialises the open\-Gl canvas for shader use. Default values are\-: gl\-Cull\-Face(\-G\-L\-\_\-\-B\-A\-C\-K); gl\-Front\-Face(\-G\-L\-\_\-\-C\-C\-W); gl\-Enable(\-G\-L\-\_\-\-D\-E\-P\-T\-H\-\_\-\-T\-E\-S\-T); gl\-Clear\-Color(0.\-75, 0.\-75, 0.\-75, 0.\-75); view frustum of 45 degrees horizontal. 
+
+Initialises the open\-Gl canvas.
+
+\begin{DoxyVerb}                   Also prints the GL_VERSION and all extensions to the console\end{DoxyVerb}
+ \begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The desired width of the canvas (forced to be a multiple of 4) \\
+\hline
+{\em height} & The height of the canvas.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width. \\
+\hline
+{\em height} & The height. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a43069eb91b8ace27b2778be18d9e8ede}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!local\-Cleanup@{local\-Cleanup}}
+\index{local\-Cleanup@{local\-Cleanup}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{local\-Cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::local\-Cleanup} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_gl___shader_window_a43069eb91b8ace27b2778be18d9e8ede}
+
+
+Place to do cleanup in inhereting classes, such as calling delete() on Drawable\-Objects. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a256e72c467903d87db25dbae662eaca6}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!local\-Init@{local\-Init}}
+\index{local\-Init@{local\-Init}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{local\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::local\-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_gl___shader_window_a256e72c467903d87db25dbae662eaca6}
+
+
+any additional initialization required by a subclass should add their code here. It is called in the correct order within \hyperlink{class_gl___shader_window_a8c6817c102720f84f5df7795852e9d5b}{init()} 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a6905f72232561b5812a284dfc7b9ce7f}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!Menu\-\_\-\-C\-B@{Menu\-\_\-\-C\-B}}
+\index{Menu\-\_\-\-C\-B@{Menu\-\_\-\-C\-B}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{Menu\-\_\-\-C\-B}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf Gl\-\_\-\-Shader\-Window\-::\-Menu\-\_\-\-C\-B} (
+\begin{DoxyParamCaption}
+\item[{Fl\-\_\-\-Widget $\ast$}]{wp, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_gl___shader_window_a6905f72232561b5812a284dfc7b9ce7f}
+
+
+Callback from menu selection. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em Fl\-\_\-\-Widget} & pointer to the widget that is the source of this call \\
+\hline
+\mbox{\tt in,out}  & {\em data} & pointer to any data to be used/modified within the callback\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em parameter1} & pointer to the widget that is the source of this call \\
+\hline
+\mbox{\tt in,out}  & {\em data} & pointer to any data to be used/modified within the callback \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a2e8d5063ac2dc9609287c0a20957aa2c}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!post\-Draw3\-D@{post\-Draw3\-D}}
+\index{post\-Draw3\-D@{post\-Draw3\-D}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{post\-Draw3\-D}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::post\-Draw3\-D} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_gl___shader_window_a2e8d5063ac2dc9609287c0a20957aa2c}
+
+
+Called every frame after all 3\-D drawing has completed. The default is simply a model\-View\-Matrix\-Stack.\-pop\-Matrix();. 
+
+Called every frame after all 3\-D drawing has completed. The default cleans up after picking and calls model\-View\-Matrix\-Stack.\-pop\-Matrix();.
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a3dd33544ebbabcac7db5864861c12809}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!pre\-Draw3\-D@{pre\-Draw3\-D}}
+\index{pre\-Draw3\-D@{pre\-Draw3\-D}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{pre\-Draw3\-D}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::pre\-Draw3\-D} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_gl___shader_window_a3dd33544ebbabcac7db5864861c12809}
+
+
+Called every frame before drawing. Contains things like gl\-Clear() 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_ac8ca550e7d44f570e4c4d2e196505143}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!rad\-To\-Deg@{rad\-To\-Deg}}
+\index{rad\-To\-Deg@{rad\-To\-Deg}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{rad\-To\-Deg}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Gl\-\_\-\-Shader\-Window\-::rad\-To\-Deg} (
+\begin{DoxyParamCaption}
+\item[{float}]{rad\-Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_ac8ca550e7d44f570e4c4d2e196505143}
+
+
+Radians to degrees. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em rad\-Angle} & The angle in radians\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the angle in degrees 
+\end{DoxyReturn}
+\hypertarget{class_gl___shader_window_a9aebb07e1342893949d60170d06d4ab8}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!resize@{resize}}
+\index{resize@{resize}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::resize} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_gl___shader_window_a9aebb07e1342893949d60170d06d4ab8}
+
+
+Resizes the canvas and reinitializes any Open\-Gl values that may need it. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a42cf6d404570858d878af82675dfb20d}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-Eye\-Orient@{set\-Eye\-Orient}}
+\index{set\-Eye\-Orient@{set\-Eye\-Orient}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-Eye\-Orient}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-Eye\-Orient} (
+\begin{DoxyParamCaption}
+\item[{float}]{pitch, }
+\item[{float}]{roll, }
+\item[{float}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a42cf6d404570858d878af82675dfb20d}
+
+
+Sets an eye orientation. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pitch} & \\
+\hline
+{\em roll} & \\
+\hline
+{\em yaw} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a0bbf51169ec4ba97f42821060c1cc122}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-Eye\-Pos@{set\-Eye\-Pos}}
+\index{set\-Eye\-Pos@{set\-Eye\-Pos}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-Eye\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-Eye\-Pos} (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a0bbf51169ec4ba97f42821060c1cc122}
+
+
+Sets an eye position. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a06a84cc7a02fc4647738f0ee683faf4c}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-Eye\-Transform\-Mode@{set\-Eye\-Transform\-Mode}}
+\index{set\-Eye\-Transform\-Mode@{set\-Eye\-Transform\-Mode}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-Eye\-Transform\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-Eye\-Transform\-Mode} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a06a84cc7a02fc4647738f0ee683faf4c}
+
+
+Sets the eye transform mode to E\-Y\-E\-\_\-\-R\-O\-T\-A\-T\-E. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a23e41d6844ce46a20ca78384d1ec894f}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-Floats@{set\-Floats}}
+\index{set\-Floats@{set\-Floats}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-Floats}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-Floats} (
+\begin{DoxyParamCaption}
+\item[{G\-Lfloat $\ast$}]{ptr, }
+\item[{int}]{amount, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a23e41d6844ce46a20ca78384d1ec894f}
+
+
+Sets the floats in an array. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ptr} & If non-\/null, the pointer. \\
+\hline
+ & {\em amount} & the number of indicies. \\
+\hline
+ & {\em ...} & The values to be set in the array \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a9d4c39cb6c5546512aa6344301024e03}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-Mouse\-Wheel\-Scalar@{set\-Mouse\-Wheel\-Scalar}}
+\index{set\-Mouse\-Wheel\-Scalar@{set\-Mouse\-Wheel\-Scalar}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-Mouse\-Wheel\-Scalar}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-Mouse\-Wheel\-Scalar} (
+\begin{DoxyParamCaption}
+\item[{float}]{scalar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a9d4c39cb6c5546512aa6344301024e03}
+
+
+Sets a mouse wheel scalar for translation to z-\/motion of the camera. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & The scalar. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a213b927eabf77a893cfddc97d74df606}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-Pick\-Matrix@{set\-Pick\-Matrix}}
+\index{set\-Pick\-Matrix@{set\-Pick\-Matrix}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-Pick\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-Pick\-Matrix} (
+\begin{DoxyParamCaption}
+\item[{G\-Ldouble}]{x, }
+\item[{G\-Ldouble}]{y, }
+\item[{G\-Ldouble}]{deltax, }
+\item[{G\-Ldouble}]{deltay, }
+\item[{G\-Lint}]{viewport\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a213b927eabf77a893cfddc97d74df606}
+
+
+A slightly modified version of the original glu\-Pick\-Matrix, taken from\-: \href{http://oss.sgi.com/cgi-bin/cvsweb.cgi/projects/ogl-sample/main/gfx/lib/glu/libutil/project.c?rev=1.4;content-type=text%2Fplain}{\tt http\-://oss.\-sgi.\-com/cgi-\/bin/cvsweb.\-cgi/projects/ogl-\/sample/main/gfx/lib/glu/libutil/project.\-c?rev=1.\-4;content-\/type=text\%2\-Fplain}. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & cursor x \\
+\hline
+{\em y} & cursor y \\
+\hline
+{\em deltax} & x size of the selection area \\
+\hline
+{\em deltay} & y size of the selection area \\
+\hline
+{\em viewport} & The viewport. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a7a5eb942d260a6330f03ed9790e40fc5}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-Refresh\-Seconds@{set\-Refresh\-Seconds}}
+\index{set\-Refresh\-Seconds@{set\-Refresh\-Seconds}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-Refresh\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-Refresh\-Seconds} (
+\begin{DoxyParamCaption}
+\item[{float}]{duration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a7a5eb942d260a6330f03ed9790e40fc5}
+
+
+Sets the minimum 'pause' between frames. Typical values range between 0.\-001 to 0.\-1 seconds. Complex frames may take longer to draw. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & The duration. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a33a225dcaaf1772cbc635a7ca189a7a7}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-Rot\-Scalar@{set\-Rot\-Scalar}}
+\index{set\-Rot\-Scalar@{set\-Rot\-Scalar}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-Rot\-Scalar}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-Rot\-Scalar} (
+\begin{DoxyParamCaption}
+\item[{float}]{scalar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a33a225dcaaf1772cbc635a7ca189a7a7}
+
+
+Sets the scalar for transforming mouse movement to degrees. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & The scalar. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a153e4df41b67cee2a38a5b73b53e0186}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-Trans\-Scalar@{set\-Trans\-Scalar}}
+\index{set\-Trans\-Scalar@{set\-Trans\-Scalar}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-Trans\-Scalar}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-Trans\-Scalar} (
+\begin{DoxyParamCaption}
+\item[{float}]{scalar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a153e4df41b67cee2a38a5b73b53e0186}
+
+
+Sets the scalar for transforming mouse movement to vovement of the camera or 'universe'. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & The scalar. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a6499a79a5d4370c777fad1d0d957ed0f}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-World\-Orient@{set\-World\-Orient}}
+\index{set\-World\-Orient@{set\-World\-Orient}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-World\-Orient}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-World\-Orient} (
+\begin{DoxyParamCaption}
+\item[{float}]{pitch, }
+\item[{float}]{roll, }
+\item[{float}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a6499a79a5d4370c777fad1d0d957ed0f}
+
+
+Sets the orientation of the global origin. In other words, all objects placed in the scene will be relative to this orientation. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pitch} & The pitch. \\
+\hline
+{\em roll} & The roll. \\
+\hline
+{\em yaw} & The yaw. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a9a1d50a03f032b25cfaaa913b5758544}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-World\-Pos@{set\-World\-Pos}}
+\index{set\-World\-Pos@{set\-World\-Pos}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-World\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-World\-Pos} (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a9a1d50a03f032b25cfaaa913b5758544}
+
+
+Sets the position of the global origin. In other words, all objects placed in the scene will be relative to this point. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The float to process. \\
+\hline
+{\em y} & The float to process. \\
+\hline
+{\em z} & The float to process. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gl___shader_window_a5b9624acedb8f7d7c5de9605a4d6c4c0}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!set\-World\-Transform\-Mode@{set\-World\-Transform\-Mode}}
+\index{set\-World\-Transform\-Mode@{set\-World\-Transform\-Mode}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{set\-World\-Transform\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Gl\-\_\-\-Shader\-Window\-::set\-World\-Transform\-Mode} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_gl___shader_window_a5b9624acedb8f7d7c5de9605a4d6c4c0}
+
+
+Sets the world transform mode to W\-O\-R\-L\-D\-\_\-\-R\-O\-T\-A\-T\-E. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_gl___shader_window_a05458410d98856caace69f720758d48f}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!timer\-Callback@{timer\-Callback}}
+\index{timer\-Callback@{timer\-Callback}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{timer\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf Gl\-\_\-\-Shader\-Window\-::timer\-Callback} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_gl___shader_window_a05458410d98856caace69f720758d48f}
+
+
+Drawing callback, triggered by the timer. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em data} & pointer to any data to be used/modified within the callback\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em pointer} & to any data to be used/modified within the callback \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gl___shader_window_a88fa20f2b66aedffcefefbe4c8e44e1f}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!eye\-Orient@{eye\-Orient}}
+\index{eye\-Orient@{eye\-Orient}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{eye\-Orient}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lfloat {\bf Gl\-\_\-\-Shader\-Window\-::eye\-Orient}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a88fa20f2b66aedffcefefbe4c8e44e1f}
+The eye orientation. \hypertarget{class_gl___shader_window_a19fc45584c8eda39a057dbfef0cf566e}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!eye\-Pos@{eye\-Pos}}
+\index{eye\-Pos@{eye\-Pos}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{eye\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lfloat {\bf Gl\-\_\-\-Shader\-Window\-::eye\-Pos}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a19fc45584c8eda39a057dbfef0cf566e}
+The eye position. \hypertarget{class_gl___shader_window_a5bdb7ba189bba700f35d1ffb47a13108}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!eye\-Vec@{eye\-Vec}}
+\index{eye\-Vec@{eye\-Vec}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{eye\-Vec}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lfloat {\bf Gl\-\_\-\-Shader\-Window\-::eye\-Vec}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a5bdb7ba189bba700f35d1ffb47a13108}
+The eye vector. \hypertarget{class_gl___shader_window_abe8db75a3baa13f8367fcc264b75adb7}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!initialized@{initialized}}
+\index{initialized@{initialized}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Gl\-\_\-\-Shader\-Window\-::initialized}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_abe8db75a3baa13f8367fcc264b75adb7}
+true if graphics have been initialized. \hypertarget{class_gl___shader_window_af47d98a4fc21b5cc41fb1671f8dc62d7}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!is\-Picking@{is\-Picking}}
+\index{is\-Picking@{is\-Picking}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{is\-Picking}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Gl\-\_\-\-Shader\-Window\-::is\-Picking}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_af47d98a4fc21b5cc41fb1671f8dc62d7}
+true if we are currently picking \hypertarget{class_gl___shader_window_a41f3f021c0952752bab82b1d1dc6941b}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!last\-Mouse\-X@{last\-Mouse\-X}}
+\index{last\-Mouse\-X@{last\-Mouse\-X}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{last\-Mouse\-X}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gl\-\_\-\-Shader\-Window\-::last\-Mouse\-X}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a41f3f021c0952752bab82b1d1dc6941b}
+The last mouse x coordinate. \hypertarget{class_gl___shader_window_a379eab3d5a683afb2e36989b30a022c1}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!last\-Mouse\-Y@{last\-Mouse\-Y}}
+\index{last\-Mouse\-Y@{last\-Mouse\-Y}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{last\-Mouse\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gl\-\_\-\-Shader\-Window\-::last\-Mouse\-Y}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a379eab3d5a683afb2e36989b30a022c1}
+The last mouse y coordinate. \hypertarget{class_gl___shader_window_aed77a38c67e6cc46a7fecd2457698d96}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!model\-View\-Matrix@{model\-View\-Matrix}}
+\index{model\-View\-Matrix@{model\-View\-Matrix}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{model\-View\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}G\-L\-Matrix\-Stack {\bf Gl\-\_\-\-Shader\-Window\-::model\-View\-Matrix}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_aed77a38c67e6cc46a7fecd2457698d96}
+The model view matrix from the open\-Gl Super\-Bible 5th Edition. (\href{http://code.google.com/p/oglsuperbible5/source/browse/trunk/Src/GLTools/include/GLMatrixStack.h}{\tt http\-://code.\-google.\-com/p/oglsuperbible5/source/browse/trunk/\-Src/\-G\-L\-Tools/include/\-G\-L\-Matrix\-Stack.\-h}) \hypertarget{class_gl___shader_window_ac3c767b731ccd775a7a7650671b2491f}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!mouse\-Wheel\-Scalar@{mouse\-Wheel\-Scalar}}
+\index{mouse\-Wheel\-Scalar@{mouse\-Wheel\-Scalar}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{mouse\-Wheel\-Scalar}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Gl\-\_\-\-Shader\-Window\-::mouse\-Wheel\-Scalar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_ac3c767b731ccd775a7a7650671b2491f}
+The mouse wheel (Z) scalar. \hypertarget{class_gl___shader_window_a5308fe8e7a0e01fa6f8d1a85ca2beb2b}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!mouse\-X@{mouse\-X}}
+\index{mouse\-X@{mouse\-X}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{mouse\-X}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gl\-\_\-\-Shader\-Window\-::mouse\-X}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a5308fe8e7a0e01fa6f8d1a85ca2beb2b}
+The current mouse x coordinate. \hypertarget{class_gl___shader_window_ab98c215b36964a73c241787f2b8fc540}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!mouse\-Y@{mouse\-Y}}
+\index{mouse\-Y@{mouse\-Y}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{mouse\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gl\-\_\-\-Shader\-Window\-::mouse\-Y}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_ab98c215b36964a73c241787f2b8fc540}
+The current mouse y coordinate. \hypertarget{class_gl___shader_window_a6f1ab655c54e12f2c7e196a1067bcb41}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!popup\-Menu@{popup\-Menu}}
+\index{popup\-Menu@{popup\-Menu}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{popup\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}Fl\-\_\-\-Menu\-\_\-\-Button$\ast$ {\bf Gl\-\_\-\-Shader\-Window\-::popup\-Menu}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a6f1ab655c54e12f2c7e196a1067bcb41}
+The popup menu. \hypertarget{class_gl___shader_window_a6e6bfac76d6be129b28cb8704f98c587}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!projection\-Matrix@{projection\-Matrix}}
+\index{projection\-Matrix@{projection\-Matrix}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{projection\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}G\-L\-Matrix\-Stack {\bf Gl\-\_\-\-Shader\-Window\-::projection\-Matrix}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a6e6bfac76d6be129b28cb8704f98c587}
+The projection matrix from the open\-Gl Super\-Bible 5th Edition. (\href{http://code.google.com/p/oglsuperbible5/source/browse/trunk/Src/GLTools/include/GLMatrixStack.h}{\tt http\-://code.\-google.\-com/p/oglsuperbible5/source/browse/trunk/\-Src/\-G\-L\-Tools/include/\-G\-L\-Matrix\-Stack.\-h}) \hypertarget{class_gl___shader_window_a295dc1c5ed52a85a1d2408bd89630d46}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!refresh\-Seconds@{refresh\-Seconds}}
+\index{refresh\-Seconds@{refresh\-Seconds}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{refresh\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Gl\-\_\-\-Shader\-Window\-::refresh\-Seconds}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a295dc1c5ed52a85a1d2408bd89630d46}
+The refresh rate in seconds. Typically 0.\-001 to 0.\-1 \hypertarget{class_gl___shader_window_a947febd52756cc0cc523ae90ead9ffe0}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!rot\-Scalar@{rot\-Scalar}}
+\index{rot\-Scalar@{rot\-Scalar}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{rot\-Scalar}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Gl\-\_\-\-Shader\-Window\-::rot\-Scalar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a947febd52756cc0cc523ae90ead9ffe0}
+The mouse rotation angle scalar. \hypertarget{class_gl___shader_window_a366908d80e9e262420a317f48b5fc17e}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!screen\-Height@{screen\-Height}}
+\index{screen\-Height@{screen\-Height}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{screen\-Height}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lsizei {\bf Gl\-\_\-\-Shader\-Window\-::screen\-Height}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a366908d80e9e262420a317f48b5fc17e}
+Height of the screen. \hypertarget{class_gl___shader_window_a9f71f994a70e27c6baa165681a8b0acc}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!screen\-Width@{screen\-Width}}
+\index{screen\-Width@{screen\-Width}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{screen\-Width}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lsizei {\bf Gl\-\_\-\-Shader\-Window\-::screen\-Width}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a9f71f994a70e27c6baa165681a8b0acc}
+Width of the screen. Must be a multiple of 4 \hypertarget{class_gl___shader_window_a5a8b7ac536d4482f0de15bd329a3b2f1}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!shader\-Manager@{shader\-Manager}}
+\index{shader\-Manager@{shader\-Manager}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{shader\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}G\-L\-Shader\-Manager {\bf Gl\-\_\-\-Shader\-Window\-::shader\-Manager}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a5a8b7ac536d4482f0de15bd329a3b2f1}
+Shader manager from the open\-Gl Super\-Bible 5th Edition. (\href{http://code.google.com/p/oglsuperbible5/source/browse/trunk/Src/GLTools/src/GLShaderManager.cpp}{\tt http\-://code.\-google.\-com/p/oglsuperbible5/source/browse/trunk/\-Src/\-G\-L\-Tools/src/\-G\-L\-Shader\-Manager.\-cpp}) \hypertarget{class_gl___shader_window_a12ad84c52e8b811327dc94c38801d361}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!tmode@{tmode}}
+\index{tmode@{tmode}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{tmode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-R\-A\-N\-S\-F\-O\-R\-M\-\_\-\-M\-O\-D\-E} {\bf Gl\-\_\-\-Shader\-Window\-::tmode}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a12ad84c52e8b811327dc94c38801d361}
+The viewing mode. \hypertarget{class_gl___shader_window_a25fb64d31dcb4f56ed8a1fa8e19bda71}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!transform\-Pipeline@{transform\-Pipeline}}
+\index{transform\-Pipeline@{transform\-Pipeline}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{transform\-Pipeline}]{\setlength{\rightskip}{0pt plus 5cm}G\-L\-Geometry\-Transform {\bf Gl\-\_\-\-Shader\-Window\-::transform\-Pipeline}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a25fb64d31dcb4f56ed8a1fa8e19bda71}
+The transform pipeline from the open\-Gl Super\-Bible 5th Edition. (\href{http://code.google.com/p/oglsuperbible5/source/browse/trunk/Src/GLTools/include/GLGeometryTransform.h}{\tt http\-://code.\-google.\-com/p/oglsuperbible5/source/browse/trunk/\-Src/\-G\-L\-Tools/include/\-G\-L\-Geometry\-Transform.\-h}) \hypertarget{class_gl___shader_window_a2287aa50de4c8ef43eb3e3377fcbfc01}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!trans\-Scalar@{trans\-Scalar}}
+\index{trans\-Scalar@{trans\-Scalar}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{trans\-Scalar}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Gl\-\_\-\-Shader\-Window\-::trans\-Scalar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a2287aa50de4c8ef43eb3e3377fcbfc01}
+The mouse translation scalar. \hypertarget{class_gl___shader_window_a493fed72766a0567958b5d39c923ae7b}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!view\-Frustum@{view\-Frustum}}
+\index{view\-Frustum@{view\-Frustum}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{view\-Frustum}]{\setlength{\rightskip}{0pt plus 5cm}G\-L\-Frustum {\bf Gl\-\_\-\-Shader\-Window\-::view\-Frustum}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_a493fed72766a0567958b5d39c923ae7b}
+The view frustum from the open\-Gl Super\-Bible 5th Edition. (\href{http://code.google.com/p/oglsuperbible5/source/browse/trunk/Src/GLTools/include/GLFrustum.h}{\tt http\-://code.\-google.\-com/p/oglsuperbible5/source/browse/trunk/\-Src/\-G\-L\-Tools/include/\-G\-L\-Frustum.\-h}) \hypertarget{class_gl___shader_window_afcf8c3826824d05b430c7ae5f34608c7}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!world\-Orient@{world\-Orient}}
+\index{world\-Orient@{world\-Orient}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{world\-Orient}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lfloat {\bf Gl\-\_\-\-Shader\-Window\-::world\-Orient}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_afcf8c3826824d05b430c7ae5f34608c7}
+The world orientation. \hypertarget{class_gl___shader_window_ad4c9da25def7e89e896cd12db40ac5fd}{\index{Gl\-\_\-\-Shader\-Window@{Gl\-\_\-\-Shader\-Window}!world\-Pos@{world\-Pos}}
+\index{world\-Pos@{world\-Pos}!Gl_ShaderWindow@{Gl\-\_\-\-Shader\-Window}}
+\subsubsection[{world\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lfloat {\bf Gl\-\_\-\-Shader\-Window\-::world\-Pos}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_gl___shader_window_ad4c9da25def7e89e896cd12db40ac5fd}
+The world position. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Gl\-\_\-\-Shader\-Window.\-h\item 
+Gl\-\_\-\-Shader\-Window.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,336 @@
+\hypertarget{class_screen_repaint}{\section{Screen\-Repaint Class Reference}
+\label{class_screen_repaint}\index{Screen\-Repaint@{Screen\-Repaint}}
+}
+
+
+\hyperlink{class_drawable_object}{Drawable\-Object} that takes a 'snapshot' of what's been already been drawn and after processing, renders the result to a screen-\/aligned textured quad.  
+
+
+
+
+{\ttfamily \#include $<$Screen\-Repaint.\-h$>$}
+
+Inheritance diagram for Screen\-Repaint\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_screen_repaint}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_screen_repaint_a71bcf622b5c4452b26d2b9f84243bfb1}{Screen\-Repaint} (G\-Luint active\-Texture, const char $\ast$vert\-File\-Name, const char $\ast$frag\-File\-Name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_screen_repaint_a751c2d2bd1e6134d28f7602957ee140b}{$\sim$\-Screen\-Repaint} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_screen_repaint_a6aac0dc8f8582386a39f2123e7723271}{resize} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Resizes the screen-\/aligned quad and adjusts buffer memory. \end{DoxyCompactList}\item 
+void \hyperlink{class_screen_repaint_a2d0707ffbfbfc21f54913437688fa075}{render} (G\-L\-Matrix\-Stack \&model\-View\-Stack, G\-L\-Matrix\-Stack \&projection\-Stack, G\-L\-Shader\-Manager \&shader\-Manager)
+\begin{DoxyCompactList}\small\item\em Renders the quad. Note! T\-His should be called {\itshape after\/} all 3\-D drawing (i.\-e. after post\-Draw3\-D()), but {\itshape before\/} draw2\-D() The steps are as follows\-: First bind the P\-B\-O as the pack buffer, then read the pixels directly to the P\-B\-O and unbind Next bind the P\-B\-O as the unpack buffer, then push the pixels straight into the texture Setup texture unit for the render surface switch to the G\-L\-\_\-\-T\-E\-X\-T\-U\-R\-E$\ast$ value that we are using as our screen texture holder write the pixels unbind Draw full screen quad with screen textures, calling \hyperlink{class_screen_repaint_a7b26ae89de772e886010fbbdaee0fbc6}{setup\-Screen\-Render\-Prog()} to access the chaders for the effect desired. \end{DoxyCompactList}\item 
+void \hyperlink{class_screen_repaint_a983641dc820e4eabfb1e6b9a9966d82b}{environment\-Calc} ()
+\begin{DoxyCompactList}\small\item\em Environment calculation. In this case, do nothing. \end{DoxyCompactList}\item 
+void \hyperlink{class_screen_repaint_a1ef4b6395e8a5758663d57062de966fd}{local\-Cleanup} ()
+\begin{DoxyCompactList}\small\item\em Make sure default F\-B\-O is bound Cleanup textures Delete detached textures Delete the pixel buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_screen_repaint_a49e16becb8912de9898f6fd423289093}{init\-Frame\-Buffer\-Objects} ()
+\begin{DoxyCompactList}\small\item\em Initialises the frame buffer objects. If this is the first time this method is called, then the shader programs are read in and the texture and pixel buffer object handles are created and stored. Otherwise, if this is called as the result of a resize, a new ortho2\-D matrix is recalculated, and if the canvas is larger than previous sizes, the pixel buffer size is re-\/allocated. \end{DoxyCompactList}\item 
+void \hyperlink{class_screen_repaint_a7b26ae89de772e886010fbbdaee0fbc6}{setup\-Screen\-Render\-Prog} (const M3\-D\-Matrix44f mat)
+\begin{DoxyCompactList}\small\item\em Sets up the screen render shader programs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\-Lsizei \hyperlink{class_screen_repaint_a547abbfc913fe100639bd66b350991db}{screen\-Width}
+\item 
+G\-Lsizei \hyperlink{class_screen_repaint_abac42d5d09d3f52c6e2567c524c03049}{screen\-Height}
+\item 
+bool \hyperlink{class_screen_repaint_aa611aa789845c1503ac2fca30a992168}{fbo\-Initialized}
+\item 
+M3\-D\-Matrix44f \hyperlink{class_screen_repaint_acb9d4f9bbb2328a04e59833932b484f5}{ortho\-Matrix}
+\item 
+char $\ast$ \hyperlink{class_screen_repaint_a7052a5a8a1d72dcdff0268179a3f54ab}{vertex\-File\-Name}
+\item 
+char $\ast$ \hyperlink{class_screen_repaint_ac78e420a0c861ad17c63f5e0ac5473dc}{fragment\-File\-Name}
+\item 
+G\-Luint \hyperlink{class_screen_repaint_a89572d6a5da58811afcf33c26d007dd9}{screen\-Render\-Prog}
+\item 
+G\-L\-Batch \hyperlink{class_screen_repaint_a0c691cfa0f3d656b02c019edf8944b6c}{screen\-Quad}
+\item 
+G\-Luint \hyperlink{class_screen_repaint_affc1c0876ba5d8401938b166e6314e8c}{screen\-Textures} \mbox{[}1\mbox{]}
+\item 
+G\-Luint \hyperlink{class_screen_repaint_aed1d40b65dbb7b8fce5f8338c1900166}{pix\-Buff\-Objs} \mbox{[}1\mbox{]}
+\item 
+G\-Luint \hyperlink{class_screen_repaint_a4b009b422686af9594c19c777529ea49}{pixel\-Data\-Size}
+\item 
+G\-Luint \hyperlink{class_screen_repaint_afeebcd4de6dcc325a5fb59b154206823}{screen\-Texture\-I\-D}
+\item 
+G\-Luint \hyperlink{class_screen_repaint_a82bc1f48111a3e7a71abdd5dbce3b3e3}{screen\-Width\-Loc}
+\item 
+G\-Luint \hyperlink{class_screen_repaint_a18d8432e475280b99a2cdb5786129011}{screen\-Height\-Loc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_drawable_object}{Drawable\-Object} that takes a 'snapshot' of what's been already been drawn and after processing, renders the result to a screen-\/aligned textured quad. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_screen_repaint_a71bcf622b5c4452b26d2b9f84243bfb1}{\index{Screen\-Repaint@{Screen\-Repaint}!Screen\-Repaint@{Screen\-Repaint}}
+\index{Screen\-Repaint@{Screen\-Repaint}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{Screen\-Repaint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Screen\-Repaint\-::\-Screen\-Repaint} (
+\begin{DoxyParamCaption}
+\item[{G\-Luint}]{active\-Texture, }
+\item[{const char $\ast$}]{vert\-File\-Name, }
+\item[{const char $\ast$}]{frag\-File\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_screen_repaint_a71bcf622b5c4452b26d2b9f84243bfb1}
+
+
+Constructor. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em active\-Texture} & The active texture. \\
+\hline
+{\em vert\-File\-Name} & Filename of the vertex shader code. \\
+\hline
+{\em frag\-File\-Name} & Filename of the fragment shader code. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_screen_repaint_a751c2d2bd1e6134d28f7602957ee140b}{\index{Screen\-Repaint@{Screen\-Repaint}!$\sim$\-Screen\-Repaint@{$\sim$\-Screen\-Repaint}}
+\index{$\sim$\-Screen\-Repaint@{$\sim$\-Screen\-Repaint}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{$\sim$\-Screen\-Repaint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Screen\-Repaint\-::$\sim$\-Screen\-Repaint} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_screen_repaint_a751c2d2bd1e6134d28f7602957ee140b}
+
+
+Destructor. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_screen_repaint_a983641dc820e4eabfb1e6b9a9966d82b}{\index{Screen\-Repaint@{Screen\-Repaint}!environment\-Calc@{environment\-Calc}}
+\index{environment\-Calc@{environment\-Calc}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{environment\-Calc}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Screen\-Repaint\-::environment\-Calc} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_screen_repaint_a983641dc820e4eabfb1e6b9a9966d82b}
+
+
+Environment calculation. In this case, do nothing. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+Implements \hyperlink{class_drawable_object_a209194d1e8aa9d51f809625ddffb8bd0}{Drawable\-Object}.
+
+\hypertarget{class_screen_repaint_a49e16becb8912de9898f6fd423289093}{\index{Screen\-Repaint@{Screen\-Repaint}!init\-Frame\-Buffer\-Objects@{init\-Frame\-Buffer\-Objects}}
+\index{init\-Frame\-Buffer\-Objects@{init\-Frame\-Buffer\-Objects}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{init\-Frame\-Buffer\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Screen\-Repaint\-::init\-Frame\-Buffer\-Objects} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_a49e16becb8912de9898f6fd423289093}
+
+
+Initialises the frame buffer objects. If this is the first time this method is called, then the shader programs are read in and the texture and pixel buffer object handles are created and stored. Otherwise, if this is called as the result of a resize, a new ortho2\-D matrix is recalculated, and if the canvas is larger than previous sizes, the pixel buffer size is re-\/allocated. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Fix bug that causes texture to draw incorrectly at large canvas sizes.\end{DoxyRefDesc}
+
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Fix bug that causes texture to draw incorrectly at large canvas sizes.\end{DoxyRefDesc}
+
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+\hypertarget{class_screen_repaint_a1ef4b6395e8a5758663d57062de966fd}{\index{Screen\-Repaint@{Screen\-Repaint}!local\-Cleanup@{local\-Cleanup}}
+\index{local\-Cleanup@{local\-Cleanup}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{local\-Cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Screen\-Repaint\-::local\-Cleanup} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_screen_repaint_a1ef4b6395e8a5758663d57062de966fd}
+
+
+Make sure default F\-B\-O is bound Cleanup textures Delete detached textures Delete the pixel buffer. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012 
+\end{DoxyDate}
+
+
+Implements \hyperlink{class_drawable_object_af2b5d9d42137f9bf15aecb5c00f79d4e}{Drawable\-Object}.
+
+\hypertarget{class_screen_repaint_a2d0707ffbfbfc21f54913437688fa075}{\index{Screen\-Repaint@{Screen\-Repaint}!render@{render}}
+\index{render@{render}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Screen\-Repaint\-::render} (
+\begin{DoxyParamCaption}
+\item[{G\-L\-Matrix\-Stack \&}]{model\-View\-Stack, }
+\item[{G\-L\-Matrix\-Stack \&}]{projection\-Stack, }
+\item[{G\-L\-Shader\-Manager \&}]{shader\-Manager}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_screen_repaint_a2d0707ffbfbfc21f54913437688fa075}
+
+
+Renders the quad. Note! T\-His should be called {\itshape after\/} all 3\-D drawing (i.\-e. after post\-Draw3\-D()), but {\itshape before\/} draw2\-D() The steps are as follows\-: First bind the P\-B\-O as the pack buffer, then read the pixels directly to the P\-B\-O and unbind Next bind the P\-B\-O as the unpack buffer, then push the pixels straight into the texture Setup texture unit for the render surface switch to the G\-L\-\_\-\-T\-E\-X\-T\-U\-R\-E$\ast$ value that we are using as our screen texture holder write the pixels unbind Draw full screen quad with screen textures, calling \hyperlink{class_screen_repaint_a7b26ae89de772e886010fbbdaee0fbc6}{setup\-Screen\-Render\-Prog()} to access the chaders for the effect desired. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em model\-View\-Stack} & modelview\-Matrix stack \\
+\hline
+\mbox{\tt in,out}  & {\em projection\-Stack} & projection matrix stack \\
+\hline
+\mbox{\tt in,out}  & {\em shader\-Manager} & Manager of default shaders \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_drawable_object_abca3d859cccf27811a99fdd3f895b34a}{Drawable\-Object}.
+
+\hypertarget{class_screen_repaint_a6aac0dc8f8582386a39f2123e7723271}{\index{Screen\-Repaint@{Screen\-Repaint}!resize@{resize}}
+\index{resize@{resize}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Screen\-Repaint\-::resize} (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_screen_repaint_a6aac0dc8f8582386a39f2123e7723271}
+
+
+Resizes the screen-\/aligned quad and adjusts buffer memory. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width. \\
+\hline
+{\em height} & The height. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_screen_repaint_a7b26ae89de772e886010fbbdaee0fbc6}{\index{Screen\-Repaint@{Screen\-Repaint}!setup\-Screen\-Render\-Prog@{setup\-Screen\-Render\-Prog}}
+\index{setup\-Screen\-Render\-Prog@{setup\-Screen\-Render\-Prog}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{setup\-Screen\-Render\-Prog}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Screen\-Repaint\-::setup\-Screen\-Render\-Prog} (
+\begin{DoxyParamCaption}
+\item[{const M3\-D\-Matrix44f}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_a7b26ae89de772e886010fbbdaee0fbc6}
+
+
+Sets up the screen render shader programs. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/15/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & The combined projection and model view matrix (\char`\"{}mvp\-Matrix\char`\"{}) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_screen_repaint_aa611aa789845c1503ac2fca30a992168}{\index{Screen\-Repaint@{Screen\-Repaint}!fbo\-Initialized@{fbo\-Initialized}}
+\index{fbo\-Initialized@{fbo\-Initialized}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{fbo\-Initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Screen\-Repaint\-::fbo\-Initialized}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_aa611aa789845c1503ac2fca30a992168}
+true if fbo initialized. \hypertarget{class_screen_repaint_ac78e420a0c861ad17c63f5e0ac5473dc}{\index{Screen\-Repaint@{Screen\-Repaint}!fragment\-File\-Name@{fragment\-File\-Name}}
+\index{fragment\-File\-Name@{fragment\-File\-Name}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{fragment\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf Screen\-Repaint\-::fragment\-File\-Name}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_ac78e420a0c861ad17c63f5e0ac5473dc}
+Filename of the fragment file. \hypertarget{class_screen_repaint_acb9d4f9bbb2328a04e59833932b484f5}{\index{Screen\-Repaint@{Screen\-Repaint}!ortho\-Matrix@{ortho\-Matrix}}
+\index{ortho\-Matrix@{ortho\-Matrix}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{ortho\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}M3\-D\-Matrix44f {\bf Screen\-Repaint\-::ortho\-Matrix}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_acb9d4f9bbb2328a04e59833932b484f5}
+The ortho matrix. \hypertarget{class_screen_repaint_aed1d40b65dbb7b8fce5f8338c1900166}{\index{Screen\-Repaint@{Screen\-Repaint}!pix\-Buff\-Objs@{pix\-Buff\-Objs}}
+\index{pix\-Buff\-Objs@{pix\-Buff\-Objs}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{pix\-Buff\-Objs}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint {\bf Screen\-Repaint\-::pix\-Buff\-Objs}\mbox{[}1\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_aed1d40b65dbb7b8fce5f8338c1900166}
+The pix buffer objects. \hypertarget{class_screen_repaint_a4b009b422686af9594c19c777529ea49}{\index{Screen\-Repaint@{Screen\-Repaint}!pixel\-Data\-Size@{pixel\-Data\-Size}}
+\index{pixel\-Data\-Size@{pixel\-Data\-Size}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{pixel\-Data\-Size}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint {\bf Screen\-Repaint\-::pixel\-Data\-Size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_a4b009b422686af9594c19c777529ea49}
+Size of the pixel data. \hypertarget{class_screen_repaint_abac42d5d09d3f52c6e2567c524c03049}{\index{Screen\-Repaint@{Screen\-Repaint}!screen\-Height@{screen\-Height}}
+\index{screen\-Height@{screen\-Height}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{screen\-Height}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lsizei {\bf Screen\-Repaint\-::screen\-Height}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_abac42d5d09d3f52c6e2567c524c03049}
+Height of the screen. \hypertarget{class_screen_repaint_a18d8432e475280b99a2cdb5786129011}{\index{Screen\-Repaint@{Screen\-Repaint}!screen\-Height\-Loc@{screen\-Height\-Loc}}
+\index{screen\-Height\-Loc@{screen\-Height\-Loc}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{screen\-Height\-Loc}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint {\bf Screen\-Repaint\-::screen\-Height\-Loc}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_a18d8432e475280b99a2cdb5786129011}
+The screen height location. \hypertarget{class_screen_repaint_a0c691cfa0f3d656b02c019edf8944b6c}{\index{Screen\-Repaint@{Screen\-Repaint}!screen\-Quad@{screen\-Quad}}
+\index{screen\-Quad@{screen\-Quad}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{screen\-Quad}]{\setlength{\rightskip}{0pt plus 5cm}G\-L\-Batch {\bf Screen\-Repaint\-::screen\-Quad}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_a0c691cfa0f3d656b02c019edf8944b6c}
+The screen quad. \hypertarget{class_screen_repaint_a89572d6a5da58811afcf33c26d007dd9}{\index{Screen\-Repaint@{Screen\-Repaint}!screen\-Render\-Prog@{screen\-Render\-Prog}}
+\index{screen\-Render\-Prog@{screen\-Render\-Prog}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{screen\-Render\-Prog}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint {\bf Screen\-Repaint\-::screen\-Render\-Prog}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_a89572d6a5da58811afcf33c26d007dd9}
+The screen render prog. \hypertarget{class_screen_repaint_afeebcd4de6dcc325a5fb59b154206823}{\index{Screen\-Repaint@{Screen\-Repaint}!screen\-Texture\-I\-D@{screen\-Texture\-I\-D}}
+\index{screen\-Texture\-I\-D@{screen\-Texture\-I\-D}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{screen\-Texture\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint {\bf Screen\-Repaint\-::screen\-Texture\-I\-D}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_afeebcd4de6dcc325a5fb59b154206823}
+Identifier for the screen texture. \hypertarget{class_screen_repaint_affc1c0876ba5d8401938b166e6314e8c}{\index{Screen\-Repaint@{Screen\-Repaint}!screen\-Textures@{screen\-Textures}}
+\index{screen\-Textures@{screen\-Textures}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{screen\-Textures}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint {\bf Screen\-Repaint\-::screen\-Textures}\mbox{[}1\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_affc1c0876ba5d8401938b166e6314e8c}
+The screen textures. \hypertarget{class_screen_repaint_a547abbfc913fe100639bd66b350991db}{\index{Screen\-Repaint@{Screen\-Repaint}!screen\-Width@{screen\-Width}}
+\index{screen\-Width@{screen\-Width}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{screen\-Width}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lsizei {\bf Screen\-Repaint\-::screen\-Width}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_a547abbfc913fe100639bd66b350991db}
+Width of the screen. \hypertarget{class_screen_repaint_a82bc1f48111a3e7a71abdd5dbce3b3e3}{\index{Screen\-Repaint@{Screen\-Repaint}!screen\-Width\-Loc@{screen\-Width\-Loc}}
+\index{screen\-Width\-Loc@{screen\-Width\-Loc}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{screen\-Width\-Loc}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint {\bf Screen\-Repaint\-::screen\-Width\-Loc}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_a82bc1f48111a3e7a71abdd5dbce3b3e3}
+The screen width location. \hypertarget{class_screen_repaint_a7052a5a8a1d72dcdff0268179a3f54ab}{\index{Screen\-Repaint@{Screen\-Repaint}!vertex\-File\-Name@{vertex\-File\-Name}}
+\index{vertex\-File\-Name@{vertex\-File\-Name}!ScreenRepaint@{Screen\-Repaint}}
+\subsubsection[{vertex\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf Screen\-Repaint\-::vertex\-File\-Name}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_screen_repaint_a7052a5a8a1d72dcdff0268179a3f54ab}
+Filename of the vertex file. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Screen\-Repaint.\-h\item 
+Screen\-Repaint.\-cpp\end{DoxyCompactItemize}

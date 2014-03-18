@@ -1,0 +1,1126 @@
+\hypertarget{class_drawable_object}{\section{Drawable\-Object Class Reference}
+\label{class_drawable_object}\index{Drawable\-Object@{Drawable\-Object}}
+}
+
+
+Base class for drawing an object in this framework. Extend to draw your own objects.  
+
+
+
+
+{\ttfamily \#include $<$Drawable\-Object.\-h$>$}
+
+Inheritance diagram for Drawable\-Object\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_drawable_object}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_drawable_object_aa5a991e086b6d0a74bd538d69570da93}{P\-I\-C\-K\-\_\-\-R\-E\-S\-U\-L\-T} \{ \\*
+{\bfseries U\-N\-A\-V\-A\-I\-L\-A\-B\-L\-E}, 
+{\bfseries H\-I\-T}, 
+{\bfseries M\-I\-S\-S}, 
+{\bfseries R\-E\-A\-D\-Y}, 
+\\*
+{\bfseries P\-I\-C\-K\-\_\-\-E\-R\-R\-O\-R}
+ \}
+\begin{DoxyCompactList}\small\item\em Values that represent P\-I\-C\-K\-\_\-\-R\-E\-S\-U\-L\-T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_drawable_object_a1c36556e2e37722200f8c367bc41ddc7}{Drawable\-Object} (G\-Luint active\-Texture)
+\begin{DoxyCompactList}\small\item\em Constructor. Sets up default positions and colors, and creates a query object for picking. \end{DoxyCompactList}\item 
+\hyperlink{class_drawable_object_ae71d57c71f7fc83fea0d0c1580dface4}{$\sim$\-Drawable\-Object} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a58423e47f0b738f76bf37e0b5a898ae2}{set\-Color} (float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em Sets a color for the object. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_aa8b950feb76e091c4cb51fcca7fb4b9f}{set\-Postion} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Sets a postion. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a42c21ea400f91eb3656c4d4c0c0382c5}{set\-Orientation} (float pitch, float roll, float yaw)
+\begin{DoxyCompactList}\small\item\em Sets an orientation. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_abf6e15098bba6c16ca87a5986333ebec}{set\-Xpos} (float x)
+\begin{DoxyCompactList}\small\item\em Sets the xpos. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a0d69b84cb0b8a9325b1a6b2316eaaba4}{set\-Ypos} (float y)
+\begin{DoxyCompactList}\small\item\em Sets the ypos. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a7f497ef5c59dc1a0571db3dfdddbc1d0}{set\-Zpos} (float z)
+\begin{DoxyCompactList}\small\item\em Sets the zpos. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_aae7de96ff22d974407e4b0a35ac0bc63}{set\-Pitch} (float pitch)
+\begin{DoxyCompactList}\small\item\em Sets rotation around the x-\/axis. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a865185a81729e9f99002d1f2a958e3bb}{set\-Roll} (float roll)
+\begin{DoxyCompactList}\small\item\em Sets rotation around the z-\/axis. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a89cc4bb15a2376c76acb0a21e32ef5e3}{set\-Yaw} (float yaw)
+\begin{DoxyCompactList}\small\item\em Sets rotation around the y-\/axis. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_ac54bd0b8b8e424809302388c70c82288}{set\-Scalar} (float s)
+\begin{DoxyCompactList}\small\item\em Sets an overall scaling value. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a1d94a668dc3b2cd7e8b43e9a7b4e4fde}{calc\-Delta\-Time} ()
+\begin{DoxyCompactList}\small\item\em Calculates the delta time between the current and previous frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a2b6935b2330fa1bc4fe7e41feda47b2d}{draw3d\-String} (float x, float y, float z, char $\ast$string, void $\ast$font)
+\begin{DoxyCompactList}\small\item\em Draw a text string in 3\-D space. \end{DoxyCompactList}\item 
+float \hyperlink{class_drawable_object_afd46e3cc8ce17bd5c3a9616aa98fad89}{get\-Collision\-Radius} ()
+\begin{DoxyCompactList}\small\item\em Gets the collision radius. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_ae989c321292e8dc79a75d381d1979e6e}{calc\-Collision\-Points} ()
+\begin{DoxyCompactList}\small\item\em Calculates the collision points. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a6cc055383bb642fb76ba6d84623ff8c6}{set\-Collision\-Sphere} (float x, float y, float z, float radius)
+\begin{DoxyCompactList}\small\item\em Sets a collision sphere. \end{DoxyCompactList}\item 
+\hypertarget{class_drawable_object_a59a4aca514e030e14b91f836ae9f2775}{float {\bfseries aabb\-Sphere\-Intersect} (const float Bmin\mbox{[}$\,$\mbox{]}, const float Bmax\mbox{[}$\,$\mbox{]}, const float C\mbox{[}$\,$\mbox{]}, float r)}\label{class_drawable_object_a59a4aca514e030e14b91f836ae9f2775}
+
+\item 
+bool \hyperlink{class_drawable_object_a64bea9df8fd8ebb1a9a2e83487400d75}{Load\-T\-G\-A\-Texture} (const char $\ast$sz\-File\-Name, G\-Lenum min\-Filter, G\-Lenum mag\-Filter, G\-Lenum wrap\-Mode)
+\begin{DoxyCompactList}\small\item\em Load in a tga file as a texture. Allows specification of the filters and the wrap mode. \end{DoxyCompactList}\item 
+bool \hyperlink{class_drawable_object_ad00e8ebe0da0c06651d9a42d77102885}{Load\-B\-M\-P\-Texture} (const char $\ast$sz\-File\-Name, G\-Lenum min\-Filter, G\-Lenum mag\-Filter, G\-Lenum wrap\-Mode)
+\begin{DoxyCompactList}\small\item\em Load in a B\-M\-P file as a texture. Allows specification of the filters and the wrap mode. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_drawable_object_abca3d859cccf27811a99fdd3f895b34a}{render} (G\-L\-Matrix\-Stack \&model\-View\-Stack, G\-L\-Matrix\-Stack \&projection\-Stack, G\-L\-Shader\-Manager \&shader\-Manager)=0
+\begin{DoxyCompactList}\small\item\em Renders this object. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a2fdf2f0139f965556fe56957e6ace856}{pick\-Render} (G\-L\-Matrix\-Stack \&model\-View\-Stack, G\-L\-Matrix\-Stack \&projection\-Stack, G\-L\-Shader\-Manager \&shader\-Manager)
+\begin{DoxyCompactList}\small\item\em Set up rendering of this object for picking. \end{DoxyCompactList}\item 
+\hyperlink{class_drawable_object_aa5a991e086b6d0a74bd538d69570da93}{P\-I\-C\-K\-\_\-\-R\-E\-S\-U\-L\-T} \hyperlink{class_drawable_object_ac8b2400d89e7f3372870322c773376af}{pick\-Result} ()
+\begin{DoxyCompactList}\small\item\em Determine the result of the pick request. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_drawable_object_a209194d1e8aa9d51f809625ddffb8bd0}{environment\-Calc} ()=0
+\begin{DoxyCompactList}\small\item\em Perform calculations required for this object to do something on a frame-\/by-\/frame basis. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_drawable_object_af2b5d9d42137f9bf15aecb5c00f79d4e}{local\-Cleanup} ()=0
+\begin{DoxyCompactList}\small\item\em Prepare for deletion of this object. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a179b2095fabfca278c40e4b73173066c}{cleanup} ()
+\begin{DoxyCompactList}\small\item\em Prepare for deletion of this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_drawable_object_a80b73d61d96585ac55a840b9045d9e0f}{set\-Floats} (G\-Lfloat $\ast$ptr, int amount,...)
+\begin{DoxyCompactList}\small\item\em Sets values in an array of floats. \end{DoxyCompactList}\item 
+float \hyperlink{class_drawable_object_a131b461829d124aa96e195ff328f04e0}{deg\-To\-Rad} (float deg\-Angle)
+\begin{DoxyCompactList}\small\item\em Degrees to radians. \end{DoxyCompactList}\item 
+float \hyperlink{class_drawable_object_a4429a1562fb50a2fe3109a883275e010}{rad\-To\-Deg} (float rad\-Angle)
+\begin{DoxyCompactList}\small\item\em Radians to degrees. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a5b2d983aa42a382771032b87d0939845}{show\-Normals} (bool show)
+\begin{DoxyCompactList}\small\item\em Shows the normals. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a249dee84469279b20c24f75488ad5360}{orient33from\-Mat44} (M3\-D\-Matrix33f \&mat33, const M3\-D\-Matrix44f mat44)
+\begin{DoxyCompactList}\small\item\em pull the orientation 3x3 matrix from a 4x4 matrix \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a145377e8576bfc735a7114c88ba9a8e8}{orient44from\-Mat44} (M3\-D\-Matrix44f \&target\-Mat, const M3\-D\-Matrix44f source\-Mat44)
+\begin{DoxyCompactList}\small\item\em pull the orientation 4x4 matrix from a 4x4 matrix \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_object_a7b21d883679921d5920512c6435c5bf6}{place\-In\-Global\-Space} ()
+\begin{DoxyCompactList}\small\item\em Place in global space. (Not currently used) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\-Lfloat \hyperlink{class_drawable_object_a53a37ba10a56302e75fdd5a77985ae43}{cur\-Color} \mbox{[}4\mbox{]}
+\item 
+G\-Lfloat \hyperlink{class_drawable_object_a2703563492849f1157e2f069ed80fc80}{matrix} \mbox{[}16\mbox{]}
+\item 
+bool \hyperlink{class_drawable_object_a7edaffb26b2265b38cdfcc97883ba98b}{draw\-Normals}
+\item 
+bool \hyperlink{class_drawable_object_aaec51d93bc4b79cf9fff8fdd30033e09}{show\-Data}
+\item 
+float \hyperlink{class_drawable_object_a1be8afe81c6c559f63c6ed01cdbcac45}{position} \mbox{[}3\mbox{]}
+\item 
+float \hyperlink{class_drawable_object_a4ade91da08f574dfb3776ca18d69f4f3}{orientation} \mbox{[}3\mbox{]}
+\item 
+float \hyperlink{class_drawable_object_a099a45653005dc07dff68e40465e7838}{scalar}
+\item 
+float \hyperlink{class_drawable_object_ab2a5aac6a78a7680449257ebe996f8e4}{bounding\-Sphere\-Radius}
+\item 
+float \hyperlink{class_drawable_object_a9f5690cffbebb0697e02f5676b43e881}{min\-A\-A\-R\-B} \mbox{[}3\mbox{]}
+\item 
+float \hyperlink{class_drawable_object_a3410849bc648108304595e21c11a78f8}{max\-A\-A\-R\-B} \mbox{[}3\mbox{]}
+\item 
+float \hyperlink{class_drawable_object_a0d9d6dab30ccb7696a17f262477e678f}{collision\-Point} \mbox{[}3\mbox{]}
+\item 
+float \hyperlink{class_drawable_object_a69b3952eaeae380114be118198908fdf}{collision\-Radius}
+\item 
+float \hyperlink{class_drawable_object_a8c8fb8681530026cd28f4bff61d37bdd}{xformed} \mbox{[}3\mbox{]}
+\item 
+clock\-\_\-t \hyperlink{class_drawable_object_abbd6a912f2bdc24bcb2ae342cb016c08}{cur\-Time}
+\item 
+clock\-\_\-t \hyperlink{class_drawable_object_af460310076bad5748078c84c4ddd7f60}{prev\-Time}
+\item 
+float \hyperlink{class_drawable_object_a590806d20dcd8f7e1422075b2f147cb6}{delta\-Time}
+\item 
+float \hyperlink{class_drawable_object_a5b57b3602270163662876bb86277602f}{v\-Red} \mbox{[}4\mbox{]}
+\item 
+\hypertarget{class_drawable_object_a8da6671a66e9f45d611685ee1eb01fdb}{float {\bfseries v\-Green} \mbox{[}4\mbox{]}}\label{class_drawable_object_a8da6671a66e9f45d611685ee1eb01fdb}
+
+\item 
+\hypertarget{class_drawable_object_a6ed3d2e5960ed50a2757c163dee6b9d9}{float {\bfseries v\-Blue} \mbox{[}4\mbox{]}}\label{class_drawable_object_a6ed3d2e5960ed50a2757c163dee6b9d9}
+
+\item 
+\hypertarget{class_drawable_object_a588e9b3d9b42c3691fcf6010539d0bf3}{float {\bfseries v\-White} \mbox{[}4\mbox{]}}\label{class_drawable_object_a588e9b3d9b42c3691fcf6010539d0bf3}
+
+\item 
+\hypertarget{class_drawable_object_acc95879a203d50e7cdd57f2dc8d4f1c5}{float {\bfseries v\-Gray} \mbox{[}4\mbox{]}}\label{class_drawable_object_acc95879a203d50e7cdd57f2dc8d4f1c5}
+
+\item 
+\hypertarget{class_drawable_object_a50fd69dcfc1bf0aef2826639f81a6b8b}{float {\bfseries v\-Cyan} \mbox{[}4\mbox{]}}\label{class_drawable_object_a50fd69dcfc1bf0aef2826639f81a6b8b}
+
+\item 
+\hypertarget{class_drawable_object_a4e6338baf560b3d877a883f18d9ca9a5}{float {\bfseries v\-Magenta} \mbox{[}4\mbox{]}}\label{class_drawable_object_a4e6338baf560b3d877a883f18d9ca9a5}
+
+\item 
+\hypertarget{class_drawable_object_a4eda839cb3b066c9c6bce0f8e10c0855}{float {\bfseries v\-Yellow} \mbox{[}4\mbox{]}}\label{class_drawable_object_a4eda839cb3b066c9c6bce0f8e10c0855}
+
+\item 
+G\-Luint \hyperlink{class_drawable_object_af80893517e95399841e8c9c0a632584d}{active\-Texture\-I\-D}
+\item 
+G\-Luint \hyperlink{class_drawable_object_aebc658d36b01bd8f5baa153b6d77652b}{draw\-Query}
+\item 
+\hyperlink{class_drawable_object_aa5a991e086b6d0a74bd538d69570da93}{P\-I\-C\-K\-\_\-\-R\-E\-S\-U\-L\-T} \hyperlink{class_drawable_object_a642edc6bff786dcfc46de84baabce189}{pick\-Query\-Result}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for drawing an object in this framework. Extend to draw your own objects. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_drawable_object_a1c36556e2e37722200f8c367bc41ddc7}{\index{Drawable\-Object@{Drawable\-Object}!Drawable\-Object@{Drawable\-Object}}
+\index{Drawable\-Object@{Drawable\-Object}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{Drawable\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Drawable\-Object\-::\-Drawable\-Object} (
+\begin{DoxyParamCaption}
+\item[{G\-Luint}]{active\-Texture}
+\end{DoxyParamCaption}
+)}}\label{class_drawable_object_a1c36556e2e37722200f8c367bc41ddc7}
+
+
+Constructor. Sets up default positions and colors, and creates a query object for picking. 
+
+Constructor.
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em active\-Texture} & The active texture (i.\-e. G\-L\-\_\-\-T\-E\-X\-T\-U\-R\-E0, G\-L\-\_\-\-T\-E\-X\-T\-U\-R\-E1, etc).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em active\-Texture} & The active texture. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_ae71d57c71f7fc83fea0d0c1580dface4}{\index{Drawable\-Object@{Drawable\-Object}!$\sim$\-Drawable\-Object@{$\sim$\-Drawable\-Object}}
+\index{$\sim$\-Drawable\-Object@{$\sim$\-Drawable\-Object}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{$\sim$\-Drawable\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Drawable\-Object\-::$\sim$\-Drawable\-Object} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_drawable_object_ae71d57c71f7fc83fea0d0c1580dface4}
+
+
+Destructor. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_drawable_object_ae989c321292e8dc79a75d381d1979e6e}{\index{Drawable\-Object@{Drawable\-Object}!calc\-Collision\-Points@{calc\-Collision\-Points}}
+\index{calc\-Collision\-Points@{calc\-Collision\-Points}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{calc\-Collision\-Points}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::calc\-Collision\-Points} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_ae989c321292e8dc79a75d381d1979e6e}
+
+
+Calculates the collision points. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+\hypertarget{class_drawable_object_a1d94a668dc3b2cd7e8b43e9a7b4e4fde}{\index{Drawable\-Object@{Drawable\-Object}!calc\-Delta\-Time@{calc\-Delta\-Time}}
+\index{calc\-Delta\-Time@{calc\-Delta\-Time}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{calc\-Delta\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::calc\-Delta\-Time} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a1d94a668dc3b2cd7e8b43e9a7b4e4fde}
+
+
+Calculates the delta time between the current and previous frame. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+\hypertarget{class_drawable_object_a179b2095fabfca278c40e4b73173066c}{\index{Drawable\-Object@{Drawable\-Object}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::cleanup} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a179b2095fabfca278c40e4b73173066c}
+
+
+Prepare for deletion of this object. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+\hypertarget{class_drawable_object_a131b461829d124aa96e195ff328f04e0}{\index{Drawable\-Object@{Drawable\-Object}!deg\-To\-Rad@{deg\-To\-Rad}}
+\index{deg\-To\-Rad@{deg\-To\-Rad}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{deg\-To\-Rad}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::deg\-To\-Rad} (
+\begin{DoxyParamCaption}
+\item[{float}]{deg\-Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}\label{class_drawable_object_a131b461829d124aa96e195ff328f04e0}
+
+
+Degrees to radians. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em deg\-Angle} & The degrees angle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+\hypertarget{class_drawable_object_a2b6935b2330fa1bc4fe7e41feda47b2d}{\index{Drawable\-Object@{Drawable\-Object}!draw3d\-String@{draw3d\-String}}
+\index{draw3d\-String@{draw3d\-String}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{draw3d\-String}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::draw3d\-String} (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z, }
+\item[{char $\ast$}]{string, }
+\item[{void $\ast$}]{font}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a2b6935b2330fa1bc4fe7e41feda47b2d}
+
+
+Draw a text string in 3\-D space. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+{\em string} & the string. \\
+\hline
+{\em font} & the font. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a209194d1e8aa9d51f809625ddffb8bd0}{\index{Drawable\-Object@{Drawable\-Object}!environment\-Calc@{environment\-Calc}}
+\index{environment\-Calc@{environment\-Calc}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{environment\-Calc}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::environment\-Calc} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_drawable_object_a209194d1e8aa9d51f809625ddffb8bd0}
+
+
+Perform calculations required for this object to do something on a frame-\/by-\/frame basis. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+
+
+Implemented in \hyperlink{class_screen_repaint_a983641dc820e4eabfb1e6b9a9966d82b}{Screen\-Repaint}, and \hyperlink{class_grid_stage_ae5dacfb118998dbfaf781765b4d12886}{Grid\-Stage}.
+
+\hypertarget{class_drawable_object_afd46e3cc8ce17bd5c3a9616aa98fad89}{\index{Drawable\-Object@{Drawable\-Object}!get\-Collision\-Radius@{get\-Collision\-Radius}}
+\index{get\-Collision\-Radius@{get\-Collision\-Radius}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{get\-Collision\-Radius}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::get\-Collision\-Radius} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_afd46e3cc8ce17bd5c3a9616aa98fad89}
+
+
+Gets the collision radius. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The collision radius. 
+\end{DoxyReturn}
+\hypertarget{class_drawable_object_ad00e8ebe0da0c06651d9a42d77102885}{\index{Drawable\-Object@{Drawable\-Object}!Load\-B\-M\-P\-Texture@{Load\-B\-M\-P\-Texture}}
+\index{Load\-B\-M\-P\-Texture@{Load\-B\-M\-P\-Texture}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{Load\-B\-M\-P\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Drawable\-Object\-::\-Load\-B\-M\-P\-Texture} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sz\-File\-Name, }
+\item[{G\-Lenum}]{min\-Filter, }
+\item[{G\-Lenum}]{mag\-Filter, }
+\item[{G\-Lenum}]{wrap\-Mode}
+\end{DoxyParamCaption}
+)}}\label{class_drawable_object_ad00e8ebe0da0c06651d9a42d77102885}
+
+
+Load in a B\-M\-P file as a texture. Allows specification of the filters and the wrap mode. 
+
+Loads a bitmap texture.
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em sz\-File\-Name} & Filename of the texture file. \\
+\hline
+{\em min\-Filter} & e.\-g. G\-L\-\_\-\-L\-I\-N\-E\-A\-R\-\_\-\-M\-I\-P\-M\-A\-P\-\_\-\-L\-I\-N\-E\-A\-R. \\
+\hline
+{\em mag\-Filter} & e.\-g. G\-L\-\_\-\-L\-I\-N\-E\-A\-R. \\
+\hline
+{\em wrap\-Mode} & The wrap mode (e.\-g. G\-L\-\_\-\-R\-E\-P\-E\-A\-T).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em sz\-File\-Name} & Filename of the file. \\
+\hline
+{\em min\-Filter} & A filter specifying the minimum. \\
+\hline
+{\em mag\-Filter} & A filter specifying the mag. \\
+\hline
+{\em wrap\-Mode} & The wrap mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{class_drawable_object_a64bea9df8fd8ebb1a9a2e83487400d75}{\index{Drawable\-Object@{Drawable\-Object}!Load\-T\-G\-A\-Texture@{Load\-T\-G\-A\-Texture}}
+\index{Load\-T\-G\-A\-Texture@{Load\-T\-G\-A\-Texture}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{Load\-T\-G\-A\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Drawable\-Object\-::\-Load\-T\-G\-A\-Texture} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sz\-File\-Name, }
+\item[{G\-Lenum}]{min\-Filter, }
+\item[{G\-Lenum}]{mag\-Filter, }
+\item[{G\-Lenum}]{wrap\-Mode}
+\end{DoxyParamCaption}
+)}}\label{class_drawable_object_a64bea9df8fd8ebb1a9a2e83487400d75}
+
+
+Load in a tga file as a texture. Allows specification of the filters and the wrap mode. 
+
+Loads a tga texture.
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em sz\-File\-Name} & Filename of the texture file. \\
+\hline
+{\em min\-Filter} & e.\-g. G\-L\-\_\-\-L\-I\-N\-E\-A\-R\-\_\-\-M\-I\-P\-M\-A\-P\-\_\-\-L\-I\-N\-E\-A\-R. \\
+\hline
+{\em mag\-Filter} & e.\-g. G\-L\-\_\-\-L\-I\-N\-E\-A\-R. \\
+\hline
+{\em wrap\-Mode} & The wrap mode (e.\-g. G\-L\-\_\-\-R\-E\-P\-E\-A\-T).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em sz\-File\-Name} & Filename of the file. \\
+\hline
+{\em min\-Filter} & A filter specifying the minimum. \\
+\hline
+{\em mag\-Filter} & A filter specifying the mag. \\
+\hline
+{\em wrap\-Mode} & The wrap mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{class_drawable_object_af2b5d9d42137f9bf15aecb5c00f79d4e}{\index{Drawable\-Object@{Drawable\-Object}!local\-Cleanup@{local\-Cleanup}}
+\index{local\-Cleanup@{local\-Cleanup}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{local\-Cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::local\-Cleanup} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_drawable_object_af2b5d9d42137f9bf15aecb5c00f79d4e}
+
+
+Prepare for deletion of this object. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+
+
+Implemented in \hyperlink{class_screen_repaint_a1ef4b6395e8a5758663d57062de966fd}{Screen\-Repaint}, and \hyperlink{class_grid_stage_a675b8adf2fe787fc4c5313a939b8de52}{Grid\-Stage}.
+
+\hypertarget{class_drawable_object_a249dee84469279b20c24f75488ad5360}{\index{Drawable\-Object@{Drawable\-Object}!orient33from\-Mat44@{orient33from\-Mat44}}
+\index{orient33from\-Mat44@{orient33from\-Mat44}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{orient33from\-Mat44}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::orient33from\-Mat44} (
+\begin{DoxyParamCaption}
+\item[{M3\-D\-Matrix33f \&}]{mat33, }
+\item[{const M3\-D\-Matrix44f}]{mat44}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a249dee84469279b20c24f75488ad5360}
+
+
+pull the orientation 3x3 matrix from a 4x4 matrix 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em mat33} & The 3x3 matrix \\
+\hline
+ & {\em mat44} & The 4x4 matrix\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em mat33} & The third mat 3. \\
+\hline
+ & {\em mat44} & The fourth mat 4. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a145377e8576bfc735a7114c88ba9a8e8}{\index{Drawable\-Object@{Drawable\-Object}!orient44from\-Mat44@{orient44from\-Mat44}}
+\index{orient44from\-Mat44@{orient44from\-Mat44}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{orient44from\-Mat44}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::orient44from\-Mat44} (
+\begin{DoxyParamCaption}
+\item[{M3\-D\-Matrix44f \&}]{target\-Mat, }
+\item[{const M3\-D\-Matrix44f}]{source\-Mat44}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a145377e8576bfc735a7114c88ba9a8e8}
+
+
+pull the orientation 4x4 matrix from a 4x4 matrix 
+
+pull the orientation 4x4 matrix from a 4x4 matrix -\/ basically zero out the position values
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target\-Mat} & Target 4x4 matrix. \\
+\hline
+ & {\em source\-Mat44} & Source 4x4 matrix.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target\-Mat} & Target mat. \\
+\hline
+ & {\em source\-Mat44} & Source mat 44. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a2fdf2f0139f965556fe56957e6ace856}{\index{Drawable\-Object@{Drawable\-Object}!pick\-Render@{pick\-Render}}
+\index{pick\-Render@{pick\-Render}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{pick\-Render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::pick\-Render} (
+\begin{DoxyParamCaption}
+\item[{G\-L\-Matrix\-Stack \&}]{model\-View\-Stack, }
+\item[{G\-L\-Matrix\-Stack \&}]{projection\-Stack, }
+\item[{G\-L\-Shader\-Manager \&}]{shader\-Manager}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a2fdf2f0139f965556fe56957e6ace856}
+
+
+Set up rendering of this object for picking. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em model\-View\-Stack} & model\-View matrix stack \\
+\hline
+\mbox{\tt in,out}  & {\em projection\-Stack} & projection matrix stack \\
+\hline
+\mbox{\tt in,out}  & {\em shader\-Manager} & Open\-Gl\-Super\-Bible (5th ed) G\-L\-Shader\-Manager \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_ac8b2400d89e7f3372870322c773376af}{\index{Drawable\-Object@{Drawable\-Object}!pick\-Result@{pick\-Result}}
+\index{pick\-Result@{pick\-Result}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{pick\-Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-I\-C\-K\-\_\-\-R\-E\-S\-U\-L\-T} {\bf Drawable\-Object\-::pick\-Result} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_ac8b2400d89e7f3372870322c773376af}
+
+
+Determine the result of the pick request. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+use this if we don't want to wait for the result. Doesn't seem to be working though gl\-Get\-Query\-Objectiv(draw\-Query, G\-L\-\_\-\-Q\-U\-E\-R\-Y\-\_\-\-R\-E\-S\-U\-L\-T\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E, \&result); if(result == 0)\{ pick\-Query\-Result = U\-N\-A\-V\-A\-I\-L\-A\-B\-L\-E; return U\-N\-A\-V\-A\-I\-L\-A\-B\-L\-E; \} pick\-Query\-Result = R\-E\-A\-D\-Y; /$\ast$ \hypertarget{class_drawable_object_a7b21d883679921d5920512c6435c5bf6}{\index{Drawable\-Object@{Drawable\-Object}!place\-In\-Global\-Space@{place\-In\-Global\-Space}}
+\index{place\-In\-Global\-Space@{place\-In\-Global\-Space}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{place\-In\-Global\-Space}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::place\-In\-Global\-Space} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a7b21d883679921d5920512c6435c5bf6}
+
+
+Place in global space. (Not currently used) 
+
+Perform the matrix multiplications that put this object where we ant it to go in global space Currently commented out.
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012 
+\end{DoxyDate}
+\hypertarget{class_drawable_object_a4429a1562fb50a2fe3109a883275e010}{\index{Drawable\-Object@{Drawable\-Object}!rad\-To\-Deg@{rad\-To\-Deg}}
+\index{rad\-To\-Deg@{rad\-To\-Deg}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{rad\-To\-Deg}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::rad\-To\-Deg} (
+\begin{DoxyParamCaption}
+\item[{float}]{rad\-Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}\label{class_drawable_object_a4429a1562fb50a2fe3109a883275e010}
+
+
+Radians to degrees. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em rad\-Angle} & The radians angle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+\hypertarget{class_drawable_object_abca3d859cccf27811a99fdd3f895b34a}{\index{Drawable\-Object@{Drawable\-Object}!render@{render}}
+\index{render@{render}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::render} (
+\begin{DoxyParamCaption}
+\item[{G\-L\-Matrix\-Stack \&}]{model\-View\-Stack, }
+\item[{G\-L\-Matrix\-Stack \&}]{projection\-Stack, }
+\item[{G\-L\-Shader\-Manager \&}]{shader\-Manager}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_drawable_object_abca3d859cccf27811a99fdd3f895b34a}
+
+
+Renders this object. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em model\-View\-Stack} & model\-View matrix stack \\
+\hline
+\mbox{\tt in,out}  & {\em projection\-Stack} & projection matrix stack \\
+\hline
+\mbox{\tt in,out}  & {\em shader\-Manager} & Open\-Gl\-Super\-Bible (5th ed) G\-L\-Shader\-Manager \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_screen_repaint_a2d0707ffbfbfc21f54913437688fa075}{Screen\-Repaint}, and \hyperlink{class_grid_stage_a1d97167973141f1a51e395c14c6d9e23}{Grid\-Stage}.
+
+\hypertarget{class_drawable_object_a6cc055383bb642fb76ba6d84623ff8c6}{\index{Drawable\-Object@{Drawable\-Object}!set\-Collision\-Sphere@{set\-Collision\-Sphere}}
+\index{set\-Collision\-Sphere@{set\-Collision\-Sphere}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Collision\-Sphere}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Collision\-Sphere} (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z, }
+\item[{float}]{radius}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a6cc055383bb642fb76ba6d84623ff8c6}
+
+
+Sets a collision sphere. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+{\em radius} & The radius. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a58423e47f0b738f76bf37e0b5a898ae2}{\index{Drawable\-Object@{Drawable\-Object}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Color} (
+\begin{DoxyParamCaption}
+\item[{float}]{r, }
+\item[{float}]{g, }
+\item[{float}]{b, }
+\item[{float}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a58423e47f0b738f76bf37e0b5a898ae2}
+
+
+Sets a color for the object. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & red (0.\-0 -\/ 1.\-0) \\
+\hline
+{\em g} & green (0.\-0 -\/ 1.\-0) \\
+\hline
+{\em b} & blue (0.\-0 -\/ 1.\-0) \\
+\hline
+{\em a} & alphs (0.\-0 -\/ 1.\-0) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a80b73d61d96585ac55a840b9045d9e0f}{\index{Drawable\-Object@{Drawable\-Object}!set\-Floats@{set\-Floats}}
+\index{set\-Floats@{set\-Floats}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Floats}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Floats} (
+\begin{DoxyParamCaption}
+\item[{G\-Lfloat $\ast$}]{ptr, }
+\item[{int}]{amount, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a80b73d61d96585ac55a840b9045d9e0f}
+
+
+Sets values in an array of floats. 
+
+Sets the floats.
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ptr} & If non-\/null, the pointer. \\
+\hline
+ & {\em size} & The size.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ptr} & If non-\/null, the pointer. \\
+\hline
+ & {\em amount} & The amount. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a42c21ea400f91eb3656c4d4c0c0382c5}{\index{Drawable\-Object@{Drawable\-Object}!set\-Orientation@{set\-Orientation}}
+\index{set\-Orientation@{set\-Orientation}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Orientation} (
+\begin{DoxyParamCaption}
+\item[{float}]{pitch, }
+\item[{float}]{roll, }
+\item[{float}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a42c21ea400f91eb3656c4d4c0c0382c5}
+
+
+Sets an orientation. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pitch} & \\
+\hline
+{\em roll} & \\
+\hline
+{\em yaw} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_aae7de96ff22d974407e4b0a35ac0bc63}{\index{Drawable\-Object@{Drawable\-Object}!set\-Pitch@{set\-Pitch}}
+\index{set\-Pitch@{set\-Pitch}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Pitch}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Pitch} (
+\begin{DoxyParamCaption}
+\item[{float}]{pitch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_aae7de96ff22d974407e4b0a35ac0bc63}
+
+
+Sets rotation around the x-\/axis. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pitch} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_aa8b950feb76e091c4cb51fcca7fb4b9f}{\index{Drawable\-Object@{Drawable\-Object}!set\-Postion@{set\-Postion}}
+\index{set\-Postion@{set\-Postion}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Postion}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Postion} (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_aa8b950feb76e091c4cb51fcca7fb4b9f}
+
+
+Sets a postion. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & vertical \\
+\hline
+{\em z} & T \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a865185a81729e9f99002d1f2a958e3bb}{\index{Drawable\-Object@{Drawable\-Object}!set\-Roll@{set\-Roll}}
+\index{set\-Roll@{set\-Roll}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Roll}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Roll} (
+\begin{DoxyParamCaption}
+\item[{float}]{roll}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a865185a81729e9f99002d1f2a958e3bb}
+
+
+Sets rotation around the z-\/axis. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em roll} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_ac54bd0b8b8e424809302388c70c82288}{\index{Drawable\-Object@{Drawable\-Object}!set\-Scalar@{set\-Scalar}}
+\index{set\-Scalar@{set\-Scalar}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Scalar}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Scalar} (
+\begin{DoxyParamCaption}
+\item[{float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_ac54bd0b8b8e424809302388c70c82288}
+
+
+Sets an overall scaling value. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_abf6e15098bba6c16ca87a5986333ebec}{\index{Drawable\-Object@{Drawable\-Object}!set\-Xpos@{set\-Xpos}}
+\index{set\-Xpos@{set\-Xpos}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Xpos}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Xpos} (
+\begin{DoxyParamCaption}
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_abf6e15098bba6c16ca87a5986333ebec}
+
+
+Sets the xpos. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a89cc4bb15a2376c76acb0a21e32ef5e3}{\index{Drawable\-Object@{Drawable\-Object}!set\-Yaw@{set\-Yaw}}
+\index{set\-Yaw@{set\-Yaw}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Yaw}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Yaw} (
+\begin{DoxyParamCaption}
+\item[{float}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a89cc4bb15a2376c76acb0a21e32ef5e3}
+
+
+Sets rotation around the y-\/axis. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em yaw} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a0d69b84cb0b8a9325b1a6b2316eaaba4}{\index{Drawable\-Object@{Drawable\-Object}!set\-Ypos@{set\-Ypos}}
+\index{set\-Ypos@{set\-Ypos}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Ypos}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Ypos} (
+\begin{DoxyParamCaption}
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a0d69b84cb0b8a9325b1a6b2316eaaba4}
+
+
+Sets the ypos. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a7f497ef5c59dc1a0571db3dfdddbc1d0}{\index{Drawable\-Object@{Drawable\-Object}!set\-Zpos@{set\-Zpos}}
+\index{set\-Zpos@{set\-Zpos}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{set\-Zpos}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::set\-Zpos} (
+\begin{DoxyParamCaption}
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_drawable_object_a7f497ef5c59dc1a0571db3dfdddbc1d0}
+
+
+Sets the zpos. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em z} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawable_object_a5b2d983aa42a382771032b87d0939845}{\index{Drawable\-Object@{Drawable\-Object}!show\-Normals@{show\-Normals}}
+\index{show\-Normals@{show\-Normals}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{show\-Normals}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Drawable\-Object\-::show\-Normals} (
+\begin{DoxyParamCaption}
+\item[{bool}]{show}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}\label{class_drawable_object_a5b2d983aa42a382771032b87d0939845}
+
+
+Shows the normals. 
+
+\begin{DoxyAuthor}{Author}
+Phil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/14/2012
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em show} & true to show, false to hide. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_drawable_object_af80893517e95399841e8c9c0a632584d}{\index{Drawable\-Object@{Drawable\-Object}!active\-Texture\-I\-D@{active\-Texture\-I\-D}}
+\index{active\-Texture\-I\-D@{active\-Texture\-I\-D}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{active\-Texture\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint {\bf Drawable\-Object\-::active\-Texture\-I\-D}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_af80893517e95399841e8c9c0a632584d}
+Identifier for the active texture. \hypertarget{class_drawable_object_ab2a5aac6a78a7680449257ebe996f8e4}{\index{Drawable\-Object@{Drawable\-Object}!bounding\-Sphere\-Radius@{bounding\-Sphere\-Radius}}
+\index{bounding\-Sphere\-Radius@{bounding\-Sphere\-Radius}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{bounding\-Sphere\-Radius}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::bounding\-Sphere\-Radius}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_ab2a5aac6a78a7680449257ebe996f8e4}
+The bounding sphere radius. \hypertarget{class_drawable_object_a0d9d6dab30ccb7696a17f262477e678f}{\index{Drawable\-Object@{Drawable\-Object}!collision\-Point@{collision\-Point}}
+\index{collision\-Point@{collision\-Point}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{collision\-Point}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::collision\-Point}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a0d9d6dab30ccb7696a17f262477e678f}
+The position of the point that we'll test collisions against \hypertarget{class_drawable_object_a69b3952eaeae380114be118198908fdf}{\index{Drawable\-Object@{Drawable\-Object}!collision\-Radius@{collision\-Radius}}
+\index{collision\-Radius@{collision\-Radius}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{collision\-Radius}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::collision\-Radius}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a69b3952eaeae380114be118198908fdf}
+The radius of the point that we'll test collisions against \hypertarget{class_drawable_object_a53a37ba10a56302e75fdd5a77985ae43}{\index{Drawable\-Object@{Drawable\-Object}!cur\-Color@{cur\-Color}}
+\index{cur\-Color@{cur\-Color}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{cur\-Color}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lfloat {\bf Drawable\-Object\-::cur\-Color}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a53a37ba10a56302e75fdd5a77985ae43}
+The current color. \hypertarget{class_drawable_object_abbd6a912f2bdc24bcb2ae342cb016c08}{\index{Drawable\-Object@{Drawable\-Object}!cur\-Time@{cur\-Time}}
+\index{cur\-Time@{cur\-Time}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{cur\-Time}]{\setlength{\rightskip}{0pt plus 5cm}clock\-\_\-t {\bf Drawable\-Object\-::cur\-Time}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_abbd6a912f2bdc24bcb2ae342cb016c08}
+The current time. \hypertarget{class_drawable_object_a590806d20dcd8f7e1422075b2f147cb6}{\index{Drawable\-Object@{Drawable\-Object}!delta\-Time@{delta\-Time}}
+\index{delta\-Time@{delta\-Time}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{delta\-Time}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::delta\-Time}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a590806d20dcd8f7e1422075b2f147cb6}
+delta time between frames \hypertarget{class_drawable_object_a7edaffb26b2265b38cdfcc97883ba98b}{\index{Drawable\-Object@{Drawable\-Object}!draw\-Normals@{draw\-Normals}}
+\index{draw\-Normals@{draw\-Normals}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{draw\-Normals}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Drawable\-Object\-::draw\-Normals}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a7edaffb26b2265b38cdfcc97883ba98b}
+true to draw normals. \hypertarget{class_drawable_object_aebc658d36b01bd8f5baa153b6d77652b}{\index{Drawable\-Object@{Drawable\-Object}!draw\-Query@{draw\-Query}}
+\index{draw\-Query@{draw\-Query}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{draw\-Query}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint {\bf Drawable\-Object\-::draw\-Query}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_aebc658d36b01bd8f5baa153b6d77652b}
+The draw query I\-D. \hypertarget{class_drawable_object_a2703563492849f1157e2f069ed80fc80}{\index{Drawable\-Object@{Drawable\-Object}!matrix@{matrix}}
+\index{matrix@{matrix}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}G\-Lfloat {\bf Drawable\-Object\-::matrix}\mbox{[}16\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a2703563492849f1157e2f069ed80fc80}
+The position and orientation matrix. \hypertarget{class_drawable_object_a3410849bc648108304595e21c11a78f8}{\index{Drawable\-Object@{Drawable\-Object}!max\-A\-A\-R\-B@{max\-A\-A\-R\-B}}
+\index{max\-A\-A\-R\-B@{max\-A\-A\-R\-B}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{max\-A\-A\-R\-B}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::max\-A\-A\-R\-B}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a3410849bc648108304595e21c11a78f8}
+The maximum axis-\/aligned bounding box X\-Y\-Z coordinates \hypertarget{class_drawable_object_a9f5690cffbebb0697e02f5676b43e881}{\index{Drawable\-Object@{Drawable\-Object}!min\-A\-A\-R\-B@{min\-A\-A\-R\-B}}
+\index{min\-A\-A\-R\-B@{min\-A\-A\-R\-B}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{min\-A\-A\-R\-B}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::min\-A\-A\-R\-B}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a9f5690cffbebb0697e02f5676b43e881}
+The minimum axis-\/aligned bounding box X\-Y\-Z coordinates \hypertarget{class_drawable_object_a4ade91da08f574dfb3776ca18d69f4f3}{\index{Drawable\-Object@{Drawable\-Object}!orientation@{orientation}}
+\index{orientation@{orientation}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{orientation}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::orientation}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a4ade91da08f574dfb3776ca18d69f4f3}
+The orientation (pitch Roll Yaw) \hypertarget{class_drawable_object_a642edc6bff786dcfc46de84baabce189}{\index{Drawable\-Object@{Drawable\-Object}!pick\-Query\-Result@{pick\-Query\-Result}}
+\index{pick\-Query\-Result@{pick\-Query\-Result}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{pick\-Query\-Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-I\-C\-K\-\_\-\-R\-E\-S\-U\-L\-T} {\bf Drawable\-Object\-::pick\-Query\-Result}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a642edc6bff786dcfc46de84baabce189}
+The pick query result. \hypertarget{class_drawable_object_a1be8afe81c6c559f63c6ed01cdbcac45}{\index{Drawable\-Object@{Drawable\-Object}!position@{position}}
+\index{position@{position}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::position}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a1be8afe81c6c559f63c6ed01cdbcac45}
+The X\-Y\-Z position. \hypertarget{class_drawable_object_af460310076bad5748078c84c4ddd7f60}{\index{Drawable\-Object@{Drawable\-Object}!prev\-Time@{prev\-Time}}
+\index{prev\-Time@{prev\-Time}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{prev\-Time}]{\setlength{\rightskip}{0pt plus 5cm}clock\-\_\-t {\bf Drawable\-Object\-::prev\-Time}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_af460310076bad5748078c84c4ddd7f60}
+Time of the previous frame. \hypertarget{class_drawable_object_a099a45653005dc07dff68e40465e7838}{\index{Drawable\-Object@{Drawable\-Object}!scalar@{scalar}}
+\index{scalar@{scalar}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{scalar}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::scalar}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a099a45653005dc07dff68e40465e7838}
+The gloabl scalar. \hypertarget{class_drawable_object_aaec51d93bc4b79cf9fff8fdd30033e09}{\index{Drawable\-Object@{Drawable\-Object}!show\-Data@{show\-Data}}
+\index{show\-Data@{show\-Data}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{show\-Data}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Drawable\-Object\-::show\-Data}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_aaec51d93bc4b79cf9fff8fdd30033e09}
+true to show, false to hide the data. \hypertarget{class_drawable_object_a5b57b3602270163662876bb86277602f}{\index{Drawable\-Object@{Drawable\-Object}!v\-Red@{v\-Red}}
+\index{v\-Red@{v\-Red}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{v\-Red}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::v\-Red}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a5b57b3602270163662876bb86277602f}
+color vectors \hypertarget{class_drawable_object_a8c8fb8681530026cd28f4bff61d37bdd}{\index{Drawable\-Object@{Drawable\-Object}!xformed@{xformed}}
+\index{xformed@{xformed}!DrawableObject@{Drawable\-Object}}
+\subsubsection[{xformed}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf Drawable\-Object\-::xformed}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_drawable_object_a8c8fb8681530026cd28f4bff61d37bdd}
+The xformed collision point 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Drawable\-Object.\-h\item 
+Drawable\-Object.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,31 @@
+﻿Build started 3/18/2014 1:11:27 PM.
+     1>Project "C:\Phil\MSVC Dev\FltkShaderSupportDll\FltShaderSupportTestExec\FltShaderSupportTestExec.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\FltShaderSupportTestExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\FltkShaderSupportDll" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt FltShaderSupportTestExec.cpp GeoTestShaderWindow.cpp ShaderViewUI.cxx SolarSystem.cpp
+         FltShaderSupportTestExec.cpp
+         GeoTestShaderWindow.cpp
+         ShaderViewUI.cxx
+         SolarSystem.cpp
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Release\FltShaderSupportTestExec.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.lib" /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.lib" /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Release" opengl32.lib glu32.lib fltkgl.lib fltk.lib WSOCK32.LIB gltools.lib FltkShaderSupportLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\FltShaderSupportTestExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Release\FltShaderSupportTestExec.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Release\FltShaderSupportTestExec.lib" /MACHINE:X86 Release\FltShaderSupportTestExec.obj
+         Release\GeoTestShaderWindow.obj
+         Release\ShaderViewUI.obj
+         Release\SolarSystem.obj
+         Release\stdafx.obj
+         "C:\Phil\MSVC Dev\FltkShaderSupportDll\Release\FltkShaderSupportLib.lib"
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Generating code
+         Finished generating code
+         FltShaderSupportTestExec.vcxproj -> C:\Phil\MSVC Dev\FltkShaderSupportDll\Release\FltShaderSupportTestExec.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Release\FltShaderSupportTestExec.exe;#1" /manifest Release\FltShaderSupportTestExec.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\FltShaderSupportTestExec.unsuccessfulbuild".
+         Touching "Release\FltShaderSupportTestExec.lastbuildstate".
+     1>Done Building Project "C:\Phil\MSVC Dev\FltkShaderSupportDll\FltShaderSupportTestExec\FltShaderSupportTestExec.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.70

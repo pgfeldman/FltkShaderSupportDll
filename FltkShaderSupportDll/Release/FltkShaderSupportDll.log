@@ -1,0 +1,50 @@
+﻿Build started 3/18/2014 1:11:22 PM.
+     1>Project "C:\Phil\MSVC Dev\FltkShaderSupportDll\FltkShaderSupportDll\FltkShaderSupportDll.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\FltkShaderSupportLib.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\GLEW.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D FLTKSHADERSUPPORTDLL_EXPORTS /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\FltkShaderSupportLib.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\GLEW.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D FLTKSHADERSUPPORTDLL_EXPORTS /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\FltkShaderSupportLib.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CollisionCube.cpp CollisionCubeBase.cpp Dprint.cpp DrawableObject.cpp FltkShaderSupportDll.cpp Gl_ShaderWindow.cpp GridStage.cpp ScreenRepaint.cpp TexturedCollisionCube.cpp
+         CollisionCube.cpp
+         CollisionCubeBase.cpp
+         Dprint.cpp
+         DrawableObject.cpp
+         FltkShaderSupportDll.cpp
+         Gl_ShaderWindow.cpp
+     1>Gl_ShaderWindow.cpp(142): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+     1>Gl_ShaderWindow.cpp(143): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : see declaration of 'strtok'
+     1>Gl_ShaderWindow.cpp(147): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : see declaration of 'strtok'
+         GridStage.cpp
+         ScreenRepaint.cpp
+     1>ScreenRepaint.cpp(28): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+     1>ScreenRepaint.cpp(31): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+         TexturedCollisionCube.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\GLEW.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D FLTKSHADERSUPPORTDLL_EXPORTS /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+       Lib:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Phil\MSVC Dev\FltkShaderSupportDll\Release\FltkShaderSupportLib.lib" /NOLOGO /LTCG Release\CollisionCube.obj
+         Release\CollisionCubeBase.obj
+         Release\dllmain.obj
+         Release\Dprint.obj
+         Release\DrawableObject.obj
+         Release\FltkShaderSupportDll.obj
+         Release\Gl_ShaderWindow.obj
+         Release\GridStage.obj
+         Release\ScreenRepaint.obj
+         Release\stdafx.obj
+         Release\TexturedCollisionCube.obj
+         FltkShaderSupportDll.vcxproj -> C:\Phil\MSVC Dev\FltkShaderSupportDll\Release\FltkShaderSupportLib.lib
+       FinalizeBuildStatus:
+         Deleting file "Release\FltkShaderSupportLib.unsuccessfulbuild".
+         Touching "Release\FltkShaderSupportLib.lastbuildstate".
+     1>Done Building Project "C:\Phil\MSVC Dev\FltkShaderSupportDll\FltkShaderSupportDll\FltkShaderSupportDll.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.03
